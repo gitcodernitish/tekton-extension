@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+//import React from 'react';
+//import ReactDOM from 'react-dom';
 import './index.css';
 import { JobDetails } from './components/job-details';
 import { StageHistory } from './components/stage-history';
@@ -8,6 +8,7 @@ import { PromotionCriteria } from './components/promotion-criteria';
 import axios from 'axios';
 import { BrowserRouter,Switch, Link, Route, matchPath } from 'react-router-dom';  
 
+const React = window.React;
 
 const pipeline1 = "CDM_DLC_PIPELINE";
 const pipeline2 = "DAG_PIPELINE1";
@@ -47,8 +48,10 @@ class Index extends React.Component {
     }
 }
 
-ReactDOM.render(
-    
+export default class Extension extends React.Component {
+
+ render() {
+    return(
     <BrowserRouter>
         <Switch>
             <Route path="/pipeline/:id" component={Pipeline}/>
@@ -57,6 +60,6 @@ ReactDOM.render(
             <Route path="/stage/promotion-criteria/" component={PromotionCriteria} />
             <Route path="/" component={Index} />
         </Switch>
-    </BrowserRouter>,
-    document.getElementById('root')
-);
+    </BrowserRouter>);
+ }
+}
