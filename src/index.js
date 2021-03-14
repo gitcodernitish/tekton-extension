@@ -5,11 +5,11 @@ import { JobDetails } from './components/job-details';
 import { StageHistory } from './components/stage-history';
 import { Pipeline } from './components/pipeline';
 import { PromotionCriteria } from './components/promotion-criteria';
-import axios from 'axios';
+//import axios from 'axios';
 import { BrowserRouter,Switch, Link, Route, matchPath } from 'react-router-dom';  
 
 const React = window.React;
-
+const axios = require("axios");
 const pipeline1 = "CDM_DLC_PIPELINE";
 const pipeline2 = "DAG_PIPELINE1";
 const pipeline3 = "DAG_PIPELINE2";
