@@ -6,7 +6,13 @@ import { StageHistory } from './components/stage-history';
 import { Pipeline } from './components/pipeline';
 import { PromotionCriteria } from './components/promotion-criteria';
 //import axios from 'axios';
-import { BrowserRouter,Switch, Link, Route, matchPath } from 'react-router-dom';  
+//import { BrowserRouter,Switch, Link, Route, matchPath } from 'react-router-dom';  
+const reactRouterDom = require('react-router-dom');
+const BrowserRouter = reactRouterDom.BrowserRouter;
+const Switch = reactRouterDom.Switch;
+const Link = reactRouterDom.Link;
+const Route = reactRouterDom.Route;
+const matchPath = reactRouterDom.matchPath;
 
 const React = window.React;
 const axios = require("axios");
