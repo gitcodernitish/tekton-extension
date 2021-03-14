@@ -70,6 +70,6 @@ export default class Extension extends React.Component {
 		React.createElement("Route", {"path": "/stage/history", "component": StageHistory}),
 	React.createElement("Route", {"path": "/job/details", "component": JobDetails}),
 		React.createElement("Route", {"path": "/stage/promotion-crieria/", "component": PromotionCriteria}),
-		React.createElement("Route", {"path": "/", "component": Index});
+		React.createElement("Route", {"path": "/", "component": Index}));
  }
 }
