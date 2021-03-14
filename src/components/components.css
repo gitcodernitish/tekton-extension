@@ -1,0 +1,107 @@
+.stage {
+    display: inline-block;
+    width: 350px;
+    border: 1px solid gray;
+    margin: 20px;
+    height: 130px;
+}
+
+.stage-status {
+    display: inline-block;
+    position: absolute;
+    height: 130px;
+    width: 20px;
+}
+
+.stage-data {
+    overflow: auto;
+    width: 350px;
+    height: 130px;
+    display: inline-flex;
+}
+
+.clear {
+    clear: both;
+}
+
+.float-left {
+    margin-left: 10px;
+    position: absolute;
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.stage-header {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.font-size-20{
+    font-size: 20px;
+}
+
+.stage-right {
+    position: absolute;
+    left: 295px;
+}
+
+.stage-body {
+    width: 100%;
+    display: inline-block;
+}
+.job {
+    display: inline-block;
+    width: 110px;
+    border: 1px solid gray;
+    margin: 20px;
+    height: 80px;
+}
+
+.stage-container {
+    position: absolute;
+    margin-left: 15px;
+    width: 305px;
+    height: 100px;
+}
+
+.blue-tag {
+    text-decoration: underline;
+    color: blue;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.job-name {
+    font-weight: 500;
+    margin: 2px
+}
+
+.job-status {
+    color: green;
+    font-size: 10px;
+    margin: 2px;
+}
+
+.job-completion-time {
+    font-size: 8px;
+    margin: 2px;
+}
+
+.job-detail {
+    margin: 2px;
+    cursor: pointer;
+}
+
+.promotion-criteria {
+    top: 114px;
+    cursor: pointer;
+}
+
+.stage-name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+max-width: 200px;
+}
