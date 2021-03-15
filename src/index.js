@@ -5,7 +5,7 @@
 //import { StageHistory } from './components/stage-history';
 //import { Pipeline } from './components/pipeline';
 //import { PromotionCriteria } from './components/promotion-criteria';
-import axios from 'axios';
+//import axios from 'axios';
 import { BrowserRouter,Switch, Link, Route, matchPath } from 'react-router-dom';  
 /*
 const reactRouterDom = require('react-router-dom');
@@ -23,7 +23,7 @@ const pipeline3 = "DAG_PIPELINE2";
 
 
 function getPipelines() {
-    return axios.get("http://127.0.0.1:5000/pipelines/");
+    return fetch("http://127.0.0.1:5000/pipelines/");
 }
 
 const pipeline = pipeline3;
