@@ -1,11 +1,11 @@
 //import React from 'react';
 //import ReactDOM from 'react-dom';
-//import './index.css';
-//import { JobDetails } from './components/job-details';
-//import { StageHistory } from './components/stage-history';
-//import { Pipeline } from './components/pipeline';
-//import { PromotionCriteria } from './components/promotion-criteria';
-//import axios from 'axios';
+import './index.css';
+import { JobDetails } from './components/job-details';
+import { StageHistory } from './components/stage-history';
+import { Pipeline } from './components/pipeline';
+import { PromotionCriteria } from './components/promotion-criteria';
+import axios from 'axios';
 import { BrowserRouter,Switch, Link, Route, matchPath } from 'react-router-dom';  
 /*
 const reactRouterDom = require('react-router-dom');
@@ -23,7 +23,7 @@ const pipeline3 = "DAG_PIPELINE2";
 
 
 function getPipelines() {
-    return fetch("http://127.0.0.1:5000/pipelines/");
+    return axios.get("http://127.0.0.1:5000/pipelines/");
 }
 
 const pipeline = pipeline3;
@@ -41,11 +41,11 @@ class Index extends React.Component {
         Promise.all([getPipelines()]).then((data) => {
             let links = [];
             for (const pipeline of data[0].data) {
-                //links.push(<li> {pipeline} <a href={"/pipeline/"+pipeline}>{pipeline}</a></li>);
-		links.push(React.createElement("li",
+                links.push(<li> {pipeline} <a href={"/pipeline/"+pipeline}>{pipeline}</a></li>);
+		/*links.push(React.createElement("li",
 			null,
 			pipeline,
-			React.createElement("a", {"href": "/pipeline/"+pipeline}, pipeline)));
+			React.createElement("a", {"href": "/pipeline/"+pipeline}, pipeline)));*/
             }        
             this.setState({
                 links
@@ -54,15 +54,15 @@ class Index extends React.Component {
     }
 
     render() {
-        //return (<ul>{this.state.links}</ul>);
-	return React.createElement("ul", null, this.state.links);
+        return (<ul>{this.state.links}</ul>);
+	//return React.createElement("ul", null, this.state.links);
     }
 }
 
 class Extension extends React.Component {
 
  render() {
-    /*return(
+    return(
     <BrowserRouter>
         <Switch>
             <Route path="/pipeline/:id" component={Pipeline}/>
@@ -71,14 +71,14 @@ class Extension extends React.Component {
             <Route path="/stage/promotion-criteria/" component={PromotionCriteria} />
             <Route path="/" component={Index} />
         </Switch>
-    </BrowserRouter>);*/
+    </BrowserRouter>);/*
 	return React.createElement(BrowserRouter, null,
 		//React.createElement("Route", {"path": "/pipeline/:id", "component": Pipeline}),
 		//React.createElement("Route", {"path": "/stage/history", "component": StageHistory}),
 		//React.createElement("Route", {"path": "/job/details", "component": JobDetails}),
 		//React.createElement("Route", {"path": "/stage/promotion-crieria/", "component": PromotionCriteria}),
 		React.createElement("Route", {"path": "/", "component": Index}));
-	 //return React.createElement("div", null, "Hello World");
+	 return React.createElement("div", null, "Hello World");*/
  }
 }
 
