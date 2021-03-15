@@ -59,7 +59,7 @@ class Index extends React.Component {
     }
 }
 
-class Extension extends React.Component {
+export default class Extension extends React.Component {
 
  render() {
     return(
@@ -82,5 +82,3 @@ class Extension extends React.Component {
  }
 }
 
-
-export default Extension;
