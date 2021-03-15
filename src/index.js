@@ -16,7 +16,7 @@ const Route = reactRouterDom.Route;
 const matchPath = reactRouterDom.matchPath;
 */
 const React = window.React;
-const axios = require("axios");
+//const axios = require("axios");
 const pipeline1 = "CDM_DLC_PIPELINE";
 const pipeline2 = "DAG_PIPELINE1";
 const pipeline3 = "DAG_PIPELINE2";
