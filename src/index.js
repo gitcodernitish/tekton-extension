@@ -58,7 +58,7 @@ class Index extends React.Component {
     }
 }
 
-export default class Extension extends React.Component {
+class Extension extends React.Component {
 
  render() {
     /*return(
@@ -79,3 +79,6 @@ export default class Extension extends React.Component {
 		React.createElement("Route", {"path": "/", "component": Index}));
  }
 }
+
+
+export default Extension;
