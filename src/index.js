@@ -6,7 +6,7 @@
 //import { Pipeline } from './components/pipeline';
 //import { PromotionCriteria } from './components/promotion-criteria';
 //import axios from 'axios';
-import { BrowserRouter,Switch, Link, Route, matchPath } from './react-router-dom';  
+import { BrowserRouter,Switch, Link, Route, matchPath } from 'react-router-dom';  
 /*
 const reactRouterDom = require('react-router-dom');
 const BrowserRouter = reactRouterDom.BrowserRouter;
