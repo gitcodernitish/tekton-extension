@@ -7,13 +7,14 @@
 //import { PromotionCriteria } from './components/promotion-criteria';
 //import axios from 'axios';
 //import { BrowserRouter,Switch, Link, Route, matchPath } from 'react-router-dom';  
+/*
 const reactRouterDom = require('react-router-dom');
 const BrowserRouter = reactRouterDom.BrowserRouter;
 const Switch = reactRouterDom.Switch;
 const Link = reactRouterDom.Link;
 const Route = reactRouterDom.Route;
 const matchPath = reactRouterDom.matchPath;
-
+*/
 const React = window.React;
 const axios = require("axios");
 const pipeline1 = "CDM_DLC_PIPELINE";
@@ -70,13 +71,14 @@ class Extension extends React.Component {
             <Route path="/stage/promotion-criteria/" component={PromotionCriteria} />
             <Route path="/" component={Index} />
         </Switch>
-    </BrowserRouter>);*/
+    </BrowserRouter>);
 	return React.createElement("BrowserRouter", null,
 		//React.createElement("Route", {"path": "/pipeline/:id", "component": Pipeline}),
 		//React.createElement("Route", {"path": "/stage/history", "component": StageHistory}),
 		//React.createElement("Route", {"path": "/job/details", "component": JobDetails}),
 		//React.createElement("Route", {"path": "/stage/promotion-crieria/", "component": PromotionCriteria}),
-		React.createElement("Route", {"path": "/", "component": Index}));
+		React.createElement("Route", {"path": "/", "component": Index}));*/
+	 return React.createElement("div", null, "Hello World");
  }
 }
 
