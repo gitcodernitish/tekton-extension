@@ -1,6 +1,6 @@
 import React, {useRef} from 'react';
 import Xarrow from 'react-xarrows';
-import './components.css';
+//import './components.css';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
