@@ -59,7 +59,7 @@ class Index extends React.Component {
     }
 }
 
-class Extension extends React.Component {
+export class Extension extends React.Component {
 
  render() {
      
@@ -82,6 +82,3 @@ class Extension extends React.Component {
 	 return React.createElement("div", null, "Hello World");*/
  }
 }
-
-
-export default Extension;

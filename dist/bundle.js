@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var React$5 = window.React;
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
@@ -7842,4 +7844,4 @@ var Extension = /*#__PURE__*/function (_React$Component2) {
   return Extension;
 }(React.Component);
 
-module.exports = Extension;
+exports.Extension = Extension;
