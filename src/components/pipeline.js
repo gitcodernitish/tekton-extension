@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+const React = window.React;
 import Xarrow from 'react-xarrows';
 //import './components.css';
 import axios from 'axios';

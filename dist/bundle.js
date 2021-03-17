@@ -1,10 +1,10 @@
 'use strict';
 
-var React$1 = window.React;
+var React$5 = require('react');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React$1);
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React$5);
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -181,7 +181,8 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
   };
 }
 
-/*#__PURE__*/(function (_React$Component) {
+var React$4 = window.React;
+var JobDetails = /*#__PURE__*/function (_React$Component) {
   _inherits(JobDetails, _React$Component);
 
   var _super = _createSuper(JobDetails);
@@ -195,14 +196,15 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
   _createClass(JobDetails, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React__default['default'].createElement("div", null, /*#__PURE__*/React__default['default'].createElement("h1", null, "Job information"), /*#__PURE__*/React__default['default'].createElement("h2", null, "Job name"), /*#__PURE__*/React__default['default'].createElement("h3", null, "Status"), /*#__PURE__*/React__default['default'].createElement("h4", null, "History"), /*#__PURE__*/React__default['default'].createElement("h5", null, "Some other information"));
+      return /*#__PURE__*/React$4.createElement("div", null, /*#__PURE__*/React$4.createElement("h1", null, "Job information"), /*#__PURE__*/React$4.createElement("h2", null, "Job name"), /*#__PURE__*/React$4.createElement("h3", null, "Status"), /*#__PURE__*/React$4.createElement("h4", null, "History"), /*#__PURE__*/React$4.createElement("h5", null, "Some other information"));
     }
   }]);
 
   return JobDetails;
-})(React__default['default'].Component);
+}(React$4.Component);
 
-/*#__PURE__*/(function (_React$Component) {
+var React$3 = window.React;
+var StageHistory = /*#__PURE__*/function (_React$Component) {
   _inherits(StageHistory, _React$Component);
 
   var _super = _createSuper(StageHistory);
@@ -217,14 +219,14 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
     key: "render",
     value: function render() {
       var data = ["data1", "data2", "data3", "data4", "data5"];
-      return /*#__PURE__*/React__default['default'].createElement("div", null, /*#__PURE__*/React__default['default'].createElement("ul", null, data.map(function (d) {
-        return /*#__PURE__*/React__default['default'].createElement("li", null, d);
+      return /*#__PURE__*/React$3.createElement("div", null, /*#__PURE__*/React$3.createElement("ul", null, data.map(function (d) {
+        return /*#__PURE__*/React$3.createElement("li", null, d);
       })));
     }
   }]);
 
   return StageHistory;
-})(React__default['default'].Component);
+}(React$3.Component);
 
 var commonjsGlobal$1 = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -5981,7 +5983,7 @@ function createReactContext(defaultValue, calculateChangedBits) {
     };
 
     return Provider;
-  }(React$1.Component);
+  }(React$5.Component);
 
   Provider.childContextTypes = (_Provider$childContex = {}, _Provider$childContex[contextProp] = propTypes.object.isRequired, _Provider$childContex);
 
@@ -6044,7 +6046,7 @@ function createReactContext(defaultValue, calculateChangedBits) {
     };
 
     return Consumer;
-  }(React$1.Component);
+  }(React$5.Component);
 
   Consumer.contextTypes = (_Consumer$contextType = {}, _Consumer$contextType[contextProp] = propTypes.object, _Consumer$contextType);
   return {
@@ -6826,8 +6828,9 @@ function matchPath(pathname, options) {
  */
 
 
+var Route =
 /*#__PURE__*/
-(function (_React$Component) {
+function (_React$Component) {
   _inheritsLoose(Route, _React$Component);
 
   function Route() {
@@ -6867,7 +6870,7 @@ function matchPath(pathname, options) {
   };
 
   return Route;
-})(React__default['default'].Component);
+}(React__default['default'].Component);
 
 function addLeadingSlash(path) {
   return path.charAt(0) === "/" ? path : "/" + path;
@@ -6990,8 +6993,9 @@ function noop() {}
  * The public API for rendering the first <Route> that matches.
  */
 
+var Switch =
 /*#__PURE__*/
-(function (_React$Component) {
+function (_React$Component) {
   _inheritsLoose(Switch, _React$Component);
 
   function Switch() {
@@ -7028,7 +7032,7 @@ function noop() {}
   };
 
   return Switch;
-})(React__default['default'].Component);
+}(React__default['default'].Component);
 
 React__default['default'].useContext;
 
@@ -7272,6 +7276,8 @@ forwardRef$1(function (_ref, forwardedRef) {
   });
 });
 
+var React$2 = window.React;
+
 var PipelineData = /*#__PURE__*/function (_React$Component) {
   _inherits(PipelineData, _React$Component);
 
@@ -7286,12 +7292,12 @@ var PipelineData = /*#__PURE__*/function (_React$Component) {
   _createClass(PipelineData, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React__default['default'].createElement("div", null, /*#__PURE__*/React__default['default'].createElement("h1", null, this.props.title), /*#__PURE__*/React__default['default'].createElement("div", null, "Branch - ", this.props.branch), /*#__PURE__*/React__default['default'].createElement("div", null, "Owner - ", this.props.owner));
+      return /*#__PURE__*/React$2.createElement("div", null, /*#__PURE__*/React$2.createElement("h1", null, this.props.title), /*#__PURE__*/React$2.createElement("div", null, "Branch - ", this.props.branch), /*#__PURE__*/React$2.createElement("div", null, "Owner - ", this.props.owner));
     }
   }]);
 
   return PipelineData;
-}(React__default['default'].Component);
+}(React$2.Component);
 
 var Job = /*#__PURE__*/function (_React$Component2) {
   _inherits(Job, _React$Component2);
@@ -7319,18 +7325,18 @@ var Job = /*#__PURE__*/function (_React$Component2) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React__default['default'].createElement("div", {
+      return /*#__PURE__*/React$2.createElement("div", {
         className: "job"
-      }, /*#__PURE__*/React__default['default'].createElement("div", {
+      }, /*#__PURE__*/React$2.createElement("div", {
         className: "job-name"
-      }, this.props.name), /*#__PURE__*/React__default['default'].createElement("div", {
+      }, this.props.name), /*#__PURE__*/React$2.createElement("div", {
         style: {
           color: this.getStatusColor()
         },
         className: "job-status"
-      }, this.props.status, " - ", this.props.build), /*#__PURE__*/React__default['default'].createElement("div", {
+      }, this.props.status, " - ", this.props.build), /*#__PURE__*/React$2.createElement("div", {
         className: "job-completion-time"
-      }, this.props.time_verbose), /*#__PURE__*/React__default['default'].createElement("a", {
+      }, this.props.time_verbose), /*#__PURE__*/React$2.createElement("a", {
         href: "/job/details/",
         className: "job-detail blue-tag"
       }, "Details"));
@@ -7338,7 +7344,7 @@ var Job = /*#__PURE__*/function (_React$Component2) {
   }]);
 
   return Job;
-}(React__default['default'].Component);
+}(React$2.Component);
 
 var StageStatus = /*#__PURE__*/function (_React$Component3) {
   _inherits(StageStatus, _React$Component3);
@@ -7366,7 +7372,7 @@ var StageStatus = /*#__PURE__*/function (_React$Component3) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React__default['default'].createElement("span", {
+      return /*#__PURE__*/React$2.createElement("span", {
         className: "stage-status",
         style: {
           background: this.getStatusColor()
@@ -7376,7 +7382,7 @@ var StageStatus = /*#__PURE__*/function (_React$Component3) {
   }]);
 
   return StageStatus;
-}(React__default['default'].Component);
+}(React$2.Component);
 
 var Stage = /*#__PURE__*/function (_React$Component4) {
   _inherits(Stage, _React$Component4);
@@ -7471,7 +7477,7 @@ var Stage = /*#__PURE__*/function (_React$Component4) {
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var jobData = _step.value;
-          jobs.push( /*#__PURE__*/React__default['default'].createElement(Job, {
+          jobs.push( /*#__PURE__*/React$2.createElement(Job, {
             name: jobData["name"],
             status: jobData["status"],
             build: jobData["build"],
@@ -7495,43 +7501,43 @@ var Stage = /*#__PURE__*/function (_React$Component4) {
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React__default['default'].createElement("span", {
+      return /*#__PURE__*/React$2.createElement("span", {
         id: this.props.id,
         ref: this.props.reference,
         className: "stage"
-      }, /*#__PURE__*/React__default['default'].createElement("span", {
+      }, /*#__PURE__*/React$2.createElement("span", {
         className: "stage-data"
-      }, /*#__PURE__*/React__default['default'].createElement(StageStatus, {
+      }, /*#__PURE__*/React$2.createElement(StageStatus, {
         status: this.state.status
-      }), /*#__PURE__*/React__default['default'].createElement("div", {
+      }), /*#__PURE__*/React$2.createElement("div", {
         className: "stage-container"
-      }, /*#__PURE__*/React__default['default'].createElement("div", {
+      }, /*#__PURE__*/React$2.createElement("div", {
         className: "stage-header"
-      }, /*#__PURE__*/React__default['default'].createElement("span", {
+      }, /*#__PURE__*/React$2.createElement("span", {
         className: "float-left font-size-20 stage-name"
-      }, this.getStageName()), /*#__PURE__*/React__default['default'].createElement("span", {
+      }, this.getStageName()), /*#__PURE__*/React$2.createElement("span", {
         className: "stage-right"
-      }, /*#__PURE__*/React__default['default'].createElement("a", {
+      }, /*#__PURE__*/React$2.createElement("a", {
         href: "/stage/history/",
         className: "blue-tag"
-      }, "History"))), /*#__PURE__*/React__default['default'].createElement("div", {
+      }, "History"))), /*#__PURE__*/React$2.createElement("div", {
         className: "stage-body"
-      }, /*#__PURE__*/React__default['default'].createElement("div", {
+      }, /*#__PURE__*/React$2.createElement("div", {
         className: "jobs-container"
-      }, this.renderJobs())), /*#__PURE__*/React__default['default'].createElement("div", {
+      }, this.renderJobs())), /*#__PURE__*/React$2.createElement("div", {
         className: "stage-tail"
-      }, /*#__PURE__*/React__default['default'].createElement("span", {
+      }, /*#__PURE__*/React$2.createElement("span", {
         className: "float-left blue-tag promotion-criteria"
-      }, /*#__PURE__*/React__default['default'].createElement("a", {
+      }, /*#__PURE__*/React$2.createElement("a", {
         href: "/stage/promotion-criteria/"
       }, "Promotion Criteria"))))));
     }
   }]);
 
   return Stage;
-}(React__default['default'].Component);
+}(React$2.Component);
 
-/*#__PURE__*/(function (_React$Component5) {
+var PipelineView = /*#__PURE__*/function (_React$Component5) {
   _inherits(PipelineView, _React$Component5);
 
   var _super5 = _createSuper(PipelineView);
@@ -7626,7 +7632,7 @@ var Stage = /*#__PURE__*/function (_React$Component4) {
 
       for (var index in this.state.dependencies) {
         var edge = this.state.dependencies[index];
-        connectors.push( /*#__PURE__*/React__default['default'].createElement(Xarrow, {
+        connectors.push( /*#__PURE__*/React$2.createElement(Xarrow, {
           start: edge["from"],
           end: edge["to"]
         }));
@@ -7640,7 +7646,7 @@ var Stage = /*#__PURE__*/function (_React$Component4) {
       var stageLevels = {};
       var stages = []; // Do BFS and render the stages
 
-      this.refs = [/*#__PURE__*/React__default['default'].createRef(), /*#__PURE__*/React__default['default'].createRef(), /*#__PURE__*/React__default['default'].createRef(), /*#__PURE__*/React__default['default'].createRef(), /*#__PURE__*/React__default['default'].createRef(), /*#__PURE__*/React__default['default'].createRef(), /*#__PURE__*/React__default['default'].createRef(), /*#__PURE__*/React__default['default'].createRef()];
+      this.refs = [React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef()];
       var queue = [];
       queue.push([this.state.startNode, 1]);
       var maxLevel = 1;
@@ -7655,7 +7661,7 @@ var Stage = /*#__PURE__*/function (_React$Component4) {
           var ref = this.refs[this.refIndex];
           this.refIndex += 1;
           this.stageMap[node] = ref;
-          var stage = /*#__PURE__*/React__default['default'].createElement(Stage, {
+          var stage = /*#__PURE__*/React$2.createElement(Stage, {
             ref: this.stageMap[node],
             reference: this.stageMap[node],
             key: node,
@@ -7677,19 +7683,19 @@ var Stage = /*#__PURE__*/function (_React$Component4) {
       }
 
       for (var level = 1; level <= maxLevel; level++) {
-        stages.push( /*#__PURE__*/React__default['default'].createElement("div", {
+        stages.push( /*#__PURE__*/React$2.createElement("div", {
           className: "stageLevel"
         }, stageLevels[level]));
       }
 
-      return /*#__PURE__*/React__default['default'].createElement("div", {
+      return /*#__PURE__*/React$2.createElement("div", {
         className: "stages"
       }, stages);
     }
   }, {
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React__default['default'].createElement("div", null, /*#__PURE__*/React__default['default'].createElement(PipelineData, {
+      return /*#__PURE__*/React$2.createElement("div", null, /*#__PURE__*/React$2.createElement(PipelineData, {
         title: this.props.match.params.id,
         branch: "b6.0",
         owner: "Tony Stark"
@@ -7698,9 +7704,12 @@ var Stage = /*#__PURE__*/function (_React$Component4) {
   }]);
 
   return PipelineView;
-})(React__default['default'].Component);
+}(React$2.Component);
 
-/*#__PURE__*/(function (_React$Component) {
+var Pipeline = PipelineView;
+
+var React$1 = window.React;
+var PromotionCriteria = /*#__PURE__*/function (_React$Component) {
   _inherits(PromotionCriteria, _React$Component);
 
   var _super = _createSuper(PromotionCriteria);
@@ -7714,23 +7723,14 @@ var Stage = /*#__PURE__*/function (_React$Component4) {
   _createClass(PromotionCriteria, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/React__default['default'].createElement("div", null, /*#__PURE__*/React__default['default'].createElement("h1", null, "Promotion Criteria"));
+      return /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement("h1", null, "Promotion Criteria"));
     }
   }]);
 
   return PromotionCriteria;
-})(React__default['default'].Component);
+}(React$1.Component);
 
-/*
-const reactRouterDom = require('react-router-dom');
-const BrowserRouter = reactRouterDom.BrowserRouter;
-const Switch = reactRouterDom.Switch;
-const Link = reactRouterDom.Link;
-const Route = reactRouterDom.Route;
-const matchPath = reactRouterDom.matchPath;
-*/
-
-var React = window.React; //const axios = require("axios");
+var React = window.React; //import ReactDOM from 'react-dom';///
 
 function getPipelines() {
   return axios.get("http://127.0.0.1:5000/pipelines/");
@@ -7763,13 +7763,25 @@ var Index = /*#__PURE__*/function (_React$Component) {
 
       Promise.all([getPipelines()]).then(function (data) {
         var links = [];
-        /*for (const pipeline of data[0].data) {
-            links.push(<li> {pipeline} <a href={"/pipeline/"+pipeline}>{pipeline}</a></li>);
-        links.push(React.createElement("li",
-        null,
-        pipeline,
-        React.createElement("a", {"href": "/pipeline/"+pipeline}, pipeline)));
-        }        */
+
+        var _iterator = _createForOfIteratorHelper(data[0].data),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var _pipeline = _step.value;
+            links.push( /*#__PURE__*/React.createElement("li", null, " ", _pipeline, " ", /*#__PURE__*/React.createElement("a", {
+              href: "/pipeline/" + _pipeline
+            }, _pipeline)));
+            links.push(React.createElement("li", null, _pipeline, React.createElement("a", {
+              "href": "/pipeline/" + _pipeline
+            }, _pipeline)));
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
 
         _this2.setState({
           links: links
@@ -7779,8 +7791,7 @@ var Index = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      //return (<ul>{this.state.links}</ul>);
-      return React.createElement("ul", null, this.state.links);
+      return /*#__PURE__*/React.createElement("ul", null, this.state.links); //return React.createElement("ul", null, this.state.links);
     }
   }]);
 
@@ -7801,25 +7812,30 @@ var Extension = /*#__PURE__*/function (_React$Component2) {
   _createClass(Extension, [{
     key: "render",
     value: function render() {
+      return /*#__PURE__*/React.createElement(BrowserRouter, null, /*#__PURE__*/React.createElement(Switch, null, /*#__PURE__*/React.createElement(Route, {
+        path: "/pipeline/:id",
+        component: Pipeline
+      }), /*#__PURE__*/React.createElement(Route, {
+        path: "/stage/history/",
+        component: StageHistory
+      }), /*#__PURE__*/React.createElement(Route, {
+        path: "/job/details",
+        component: JobDetails
+      }), /*#__PURE__*/React.createElement(Route, {
+        path: "/stage/promotion-criteria/",
+        component: PromotionCriteria
+      }), /*#__PURE__*/React.createElement(Route, {
+        path: "/",
+        component: Index
+      })));
       /*
-      return(
-      <BrowserRouter>
-         <Switch>
-             <Route path="/pipeline/:id" component={Pipeline}/>
-             <Route path="/stage/history/" component={StageHistory} />
-             <Route path="/job/details" component={JobDetails}/>
-             <Route path="/stage/promotion-criteria/" component={PromotionCriteria} />
-             <Route path="/" component={Index} />
-         </Switch>
-      </BrowserRouter>);*/
-      return React.createElement(BrowserRouter, null, //React.createElement("Route", {"path": "/pipeline/:id", "component": Pipeline}),
+      return React.createElement(BrowserRouter, null,
+      //React.createElement("Route", {"path": "/pipeline/:id", "component": Pipeline}),
       //React.createElement("Route", {"path": "/stage/history", "component": StageHistory}),
       //React.createElement("Route", {"path": "/job/details", "component": JobDetails}),
       //React.createElement("Route", {"path": "/stage/promotion-crieria/", "component": PromotionCriteria}),
-      React.createElement("Route", {
-        "path": "/",
-        "component": Index
-      }));
+      React.createElement("Route", {"path": "/", "component": Index}));
+      return React.createElement("div", null, "Hello World");*/
     }
   }]);
 

@@ -1,5 +1,4 @@
-import React from 'react';
-
+const React = window.React;
 
 export class Connector extends React.Component {
     render() {

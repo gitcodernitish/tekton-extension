@@ -1,4 +1,4 @@
-
+const React = window.React;
 //import ReactDOM from 'react-dom';///
 //import './index.css';
 import { JobDetails } from './components/job-details';
@@ -15,7 +15,7 @@ const Link = reactRouterDom.Link;
 const Route = reactRouterDom.Route;
 const matchPath = reactRouterDom.matchPath;
 */
-const React = window.React;
+
 //const axios = require("axios");
 const pipeline1 = "CDM_DLC_PIPELINE";
 const pipeline2 = "DAG_PIPELINE1";
@@ -40,13 +40,13 @@ class Index extends React.Component {
     loadLinks() {
         Promise.all([getPipelines()]).then((data) => {
             let links = [];
-            /*for (const pipeline of data[0].data) {
+            for (const pipeline of data[0].data) {
                 links.push(<li> {pipeline} <a href={"/pipeline/"+pipeline}>{pipeline}</a></li>);
 		links.push(React.createElement("li",
 			null,
 			pipeline,
 			React.createElement("a", {"href": "/pipeline/"+pipeline}, pipeline)));
-            }        */
+            }        
             this.setState({
                 links
             })
@@ -54,15 +54,15 @@ class Index extends React.Component {
     }
 
     render() {
-        //return (<ul>{this.state.links}</ul>);
-        return React.createElement("ul", null, this.state.links);
+        return (<ul>{this.state.links}</ul>);
+        //return React.createElement("ul", null, this.state.links);
     }
 }
 
-export default class Extension extends React.Component {
+class Extension extends React.Component {
 
  render() {
-     /*
+     
     return(
     <BrowserRouter>
         <Switch>
@@ -72,14 +72,16 @@ export default class Extension extends React.Component {
             <Route path="/stage/promotion-criteria/" component={PromotionCriteria} />
             <Route path="/" component={Index} />
         </Switch>
-    </BrowserRouter>);*/
+    </BrowserRouter>);/*
 	return React.createElement(BrowserRouter, null,
 		//React.createElement("Route", {"path": "/pipeline/:id", "component": Pipeline}),
 		//React.createElement("Route", {"path": "/stage/history", "component": StageHistory}),
 		//React.createElement("Route", {"path": "/job/details", "component": JobDetails}),
 		//React.createElement("Route", {"path": "/stage/promotion-crieria/", "component": PromotionCriteria}),
 		React.createElement("Route", {"path": "/", "component": Index}));
-	 return React.createElement("div", null, "Hello World");
+	 return React.createElement("div", null, "Hello World");*/
  }
 }
 
+
+export default Extension;
