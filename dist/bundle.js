@@ -1,6 +1,6 @@
 'use strict';
 
-var React = require('react');
+var React$1 = require('react');
 var http = require('http');
 var https = require('https');
 var url = require('url');
@@ -13,7 +13,7 @@ var zlib = require('zlib');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
-var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React$1);
 var http__default = /*#__PURE__*/_interopDefaultLegacy(http);
 var https__default = /*#__PURE__*/_interopDefaultLegacy(https);
 var url__default = /*#__PURE__*/_interopDefaultLegacy(url);
@@ -9049,7 +9049,7 @@ function createReactContext(defaultValue, calculateChangedBits) {
     };
 
     return Provider;
-  }(React.Component);
+  }(React$1.Component);
 
   Provider.childContextTypes = (_Provider$childContex = {}, _Provider$childContex[contextProp] = propTypes.object.isRequired, _Provider$childContex);
 
@@ -9112,7 +9112,7 @@ function createReactContext(defaultValue, calculateChangedBits) {
     };
 
     return Consumer;
-  }(React.Component);
+  }(React$1.Component);
 
   Consumer.contextTypes = (_Consumer$contextType = {}, _Consumer$contextType[contextProp] = propTypes.object, _Consumer$contextType);
   return {
@@ -10929,6 +10929,17 @@ var Stage = /*#__PURE__*/function (_React$Component4) {
   return PromotionCriteria;
 })(React__default['default'].Component);
 
+/*
+const reactRouterDom = require('react-router-dom');
+const BrowserRouter = reactRouterDom.BrowserRouter;
+const Switch = reactRouterDom.Switch;
+const Link = reactRouterDom.Link;
+const Route = reactRouterDom.Route;
+const matchPath = reactRouterDom.matchPath;
+*/
+
+var React = window.React; //const axios = require("axios");
+
 function getPipelines() {
   return axios.get("http://127.0.0.1:5000/pipelines/");
 }
@@ -10977,12 +10988,12 @@ var Index = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       //return (<ul>{this.state.links}</ul>);
-      return /*#__PURE__*/React__default['default'].createElement("ul", null, this.state.links);
+      return React.createElement("ul", null, this.state.links);
     }
   }]);
 
   return Index;
-}(React__default['default'].Component);
+}(React.Component);
 
 var Extension = /*#__PURE__*/function (_React$Component2) {
   _inherits(Extension, _React$Component2);
@@ -11009,13 +11020,11 @@ var Extension = /*#__PURE__*/function (_React$Component2) {
              <Route path="/" component={Index} />
          </Switch>
       </BrowserRouter>);*/
-      return /*#__PURE__*/React__default['default'].createElement(BrowserRouter, null,
-      /*#__PURE__*/
-      //React.createElement("Route", {"path": "/pipeline/:id", "component": Pipeline}),
+      return React.createElement(BrowserRouter, null, //React.createElement("Route", {"path": "/pipeline/:id", "component": Pipeline}),
       //React.createElement("Route", {"path": "/stage/history", "component": StageHistory}),
       //React.createElement("Route", {"path": "/job/details", "component": JobDetails}),
       //React.createElement("Route", {"path": "/stage/promotion-crieria/", "component": PromotionCriteria}),
-      React__default['default'].createElement("Route", {
+      React.createElement("Route", {
         "path": "/",
         "component": Index
       }));
@@ -11023,6 +11032,6 @@ var Extension = /*#__PURE__*/function (_React$Component2) {
   }]);
 
   return Extension;
-}(React__default['default'].Component);
+}(React.Component);
 
 module.exports = Extension;
