@@ -1,231 +1,44 @@
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var React$5 = window.React;
+var React$5 = require('react');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React$5);
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) _setPrototypeOf(subClass, superClass);
-}
-
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-function _isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
-
-  try {
-    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (typeof call === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return _assertThisInitialized(self);
-}
-
-function _createSuper(Derived) {
-  var hasNativeReflectConstruct = _isNativeReflectConstruct();
-
-  return function _createSuperInternal() {
-    var Super = _getPrototypeOf(Derived),
-        result;
-
-    if (hasNativeReflectConstruct) {
-      var NewTarget = _getPrototypeOf(this).constructor;
-
-      result = Reflect.construct(Super, arguments, NewTarget);
-    } else {
-      result = Super.apply(this, arguments);
-    }
-
-    return _possibleConstructorReturn(this, result);
-  };
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
-
-  return arr2;
-}
-
-function _createForOfIteratorHelper(o, allowArrayLike) {
-  var it;
-
-  if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {
-    if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {
-      if (it) o = it;
-      var i = 0;
-
-      var F = function () {};
-
-      return {
-        s: F,
-        n: function () {
-          if (i >= o.length) return {
-            done: true
-          };
-          return {
-            done: false,
-            value: o[i++]
-          };
-        },
-        e: function (e) {
-          throw e;
-        },
-        f: F
-      };
-    }
-
-    throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-  }
-
-  var normalCompletion = true,
-      didErr = false,
-      err;
-  return {
-    s: function () {
-      it = o[Symbol.iterator]();
-    },
-    n: function () {
-      var step = it.next();
-      normalCompletion = step.done;
-      return step;
-    },
-    e: function (e) {
-      didErr = true;
-      err = e;
-    },
-    f: function () {
-      try {
-        if (!normalCompletion && it.return != null) it.return();
-      } finally {
-        if (didErr) throw err;
-      }
-    }
-  };
-}
-
 var React$4 = window.React;
-var JobDetails = /*#__PURE__*/function (_React$Component) {
-  _inherits(JobDetails, _React$Component);
-
-  var _super = _createSuper(JobDetails);
-
+var JobDetails = /*@__PURE__*/function (superclass) {
   function JobDetails() {
-    _classCallCheck(this, JobDetails);
-
-    return _super.apply(this, arguments);
+    superclass.apply(this, arguments);
   }
 
-  _createClass(JobDetails, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React$4.createElement("div", null, /*#__PURE__*/React$4.createElement("h1", null, "Job information"), /*#__PURE__*/React$4.createElement("h2", null, "Job name"), /*#__PURE__*/React$4.createElement("h3", null, "Status"), /*#__PURE__*/React$4.createElement("h4", null, "History"), /*#__PURE__*/React$4.createElement("h5", null, "Some other information"));
-    }
-  }]);
+  if (superclass) JobDetails.__proto__ = superclass;
+  JobDetails.prototype = Object.create(superclass && superclass.prototype);
+  JobDetails.prototype.constructor = JobDetails;
+
+  JobDetails.prototype.render = function render() {
+    return React$4.createElement('div', null, React$4.createElement('h1', null, "Job information"), React$4.createElement('h2', null, "Job name"), React$4.createElement('h3', null, "Status"), React$4.createElement('h4', null, "History"), React$4.createElement('h5', null, "Some other information"));
+  };
 
   return JobDetails;
 }(React$4.Component);
 
 var React$3 = window.React;
-var StageHistory = /*#__PURE__*/function (_React$Component) {
-  _inherits(StageHistory, _React$Component);
-
-  var _super = _createSuper(StageHistory);
-
+var StageHistory = /*@__PURE__*/function (superclass) {
   function StageHistory() {
-    _classCallCheck(this, StageHistory);
-
-    return _super.apply(this, arguments);
+    superclass.apply(this, arguments);
   }
 
-  _createClass(StageHistory, [{
-    key: "render",
-    value: function render() {
-      var data = ["data1", "data2", "data3", "data4", "data5"];
-      return /*#__PURE__*/React$3.createElement("div", null, /*#__PURE__*/React$3.createElement("ul", null, data.map(function (d) {
-        return /*#__PURE__*/React$3.createElement("li", null, d);
-      })));
-    }
-  }]);
+  if (superclass) StageHistory.__proto__ = superclass;
+  StageHistory.prototype = Object.create(superclass && superclass.prototype);
+  StageHistory.prototype.constructor = StageHistory;
+
+  StageHistory.prototype.render = function render() {
+    var data = ["data1", "data2", "data3", "data4", "data5"];
+    return React$3.createElement('div', null, React$3.createElement('ul', null, data.map(function (d) {
+      return React$3.createElement('li', null, d);
+    })));
+  };
 
   return StageHistory;
 }(React$3.Component);
@@ -2598,22 +2411,22 @@ var lodash_pick = pick;
 var utils$2 = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.typeOf = exports.getElementByPropGiven = void 0;
-exports.getElementByPropGiven = (ref) => {
-    let myRef;
+exports.getElementByPropGiven = function (ref) {
+    var myRef;
     if (typeof ref === "string") {
         myRef = document.getElementById(ref);
     }
     else
-        myRef = ref.current;
+        { myRef = ref.current; }
     return myRef;
 };
-exports.typeOf = (arg) => {
-    let type = typeof arg;
+exports.typeOf = function (arg) {
+    var type = typeof arg;
     if (type === "object") {
         if (arg === null)
-            type = "null";
+            { type = "null"; }
         else if (Array.isArray(arg))
-            type = "array";
+            { type = "array"; }
     }
     return type;
 };
@@ -2710,15 +2523,15 @@ exports.buzzierMinSols = exports.bzFunction = void 0;
  * returns buzzier curve function with 2 controls points
  * bzCurve with 2 control points function(4 points total):  bz = (1−t)^3*p1 + 3(1−t)^2*t*p2 +3(1−t)*t^2*p3 + t^3*p4
  */
-exports.bzFunction = (p1, p2, p3, p4) => (t) => Math.pow((1 - t), 3) * p1 +
+exports.bzFunction = function (p1, p2, p3, p4) { return function (t) { return Math.pow((1 - t), 3) * p1 +
     3 * Math.pow((1 - t), 2) * t * p2 +
     3 * (1 - t) * Math.pow(t, 2) * p3 +
-    Math.pow(t, 3) * p4;
+    Math.pow(t, 3) * p4; }; };
 /**
  * returns 2 solutions from extram points for buzzier curve with 2 controls points
  */
-exports.buzzierMinSols = (p1, p2, p3, p4) => {
-    const bz = exports.bzFunction(p1, p2, p3, p4);
+exports.buzzierMinSols = function (p1, p2, p3, p4) {
+    var bz = exports.bzFunction(p1, p2, p3, p4);
     // dt(bz) = -3 p1 (1 - t)^2 + 3 p2 (1 - t)^2 - 6 p2 (1 - t) t + 6 p3 (1 - t) t - 3 p3 t^2 + 3 p4 t^2
     // when p1=(x1,y1),p2=(cpx1,cpy1),p3=(cpx2,cpy2),p4=(x2,y2)
     // then extrema points is when dt(bz) = 0
@@ -2726,12 +2539,12 @@ exports.buzzierMinSols = (p1, p2, p3, p4) => {
     // if we mark A=(-6 p1 + 12 p2 - 6 p3) and B=(6 p1 - 12 p2 + 6 p3)^2 - 4 (3 p2 - 3 p1) (-3 p1 + 9 p2 - 9 p3 + 3 p4)) and C =(2 (-3 p1 + 9 p2 - 9 p3 + 3 p4) then
     // tSol = A ± sqrt(B)
     // then solution we want is: bz(tSol)
-    const A = -6 * p1 + 12 * p2 - 6 * p3;
-    const B = Math.pow((-6 * p1 + 12 * p2 - 6 * p3), 2) -
+    var A = -6 * p1 + 12 * p2 - 6 * p3;
+    var B = Math.pow((-6 * p1 + 12 * p2 - 6 * p3), 2) -
         4 * (3 * p2 - 3 * p1) * (-3 * p1 + 9 * p2 - 9 * p3 + 3 * p4);
-    const C = 2 * (-3 * p1 + 9 * p2 - 9 * p3 + 3 * p4);
-    const sol1 = bz((A + Math.sqrt(B)) / C);
-    const sol2 = bz((A - Math.sqrt(B)) / C);
+    var C = 2 * (-3 * p1 + 9 * p2 - 9 * p3 + 3 * p4);
+    var sol1 = bz((A + Math.sqrt(B)) / C);
+    var sol2 = bz((A - Math.sqrt(B)) / C);
     return [sol1, sol2];
 };
 //# sourceMappingURL=buzzier.js.map
@@ -2744,22 +2557,22 @@ buzzier.bzFunction;
 var utils$1 = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.typeOf = exports.getElementByPropGiven = void 0;
-exports.getElementByPropGiven = (ref) => {
-    let myRef;
+exports.getElementByPropGiven = function (ref) {
+    var myRef;
     if (typeof ref === "string") {
         myRef = document.getElementById(ref);
     }
     else
-        myRef = ref.current;
+        { myRef = ref.current; }
     return myRef;
 };
-exports.typeOf = (arg) => {
-    let type = typeof arg;
+exports.typeOf = function (arg) {
+    var type = typeof arg;
     if (type === "object") {
         if (arg === null)
-            type = "null";
+            { type = "null"; }
         else if (Array.isArray(arg))
-            type = "array";
+            { type = "array"; }
     }
     return type;
 };
@@ -2777,7 +2590,7 @@ var anchors = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getShortestLine = exports.prepareAnchorLines = void 0;
 
-const getAnchorsDefaultOffsets = (width, height) => {
+var getAnchorsDefaultOffsets = function (width, height) {
     return {
         middle: { rightness: width * 0.5, bottomness: height * 0.5 },
         left: { rightness: 0, bottomness: height * 0.5 },
@@ -2786,14 +2599,14 @@ const getAnchorsDefaultOffsets = (width, height) => {
         bottom: { rightness: width * 0.5, bottomness: height },
     };
 };
-exports.prepareAnchorLines = (anchor, anchorPos) => {
-    let defsOffsets = getAnchorsDefaultOffsets(anchorPos.right - anchorPos.x, anchorPos.bottom - anchorPos.y);
+exports.prepareAnchorLines = function (anchor, anchorPos) {
+    var defsOffsets = getAnchorsDefaultOffsets(anchorPos.right - anchorPos.x, anchorPos.bottom - anchorPos.y);
     // convert given anchors to array if array not already given
-    let anchorChoice = Array.isArray(anchor) ? anchor : [anchor];
+    var anchorChoice = Array.isArray(anchor) ? anchor : [anchor];
     if (anchorChoice.length == 0)
-        anchorChoice = ["auto"];
+        { anchorChoice = ["auto"]; }
     //now map each item in the list to relevant object
-    let anchorChoiceMapped = anchorChoice.map((anchorChoice) => {
+    var anchorChoiceMapped = anchorChoice.map(function (anchorChoice) {
         if (utils$1.typeOf(anchorChoice) === "string") {
             anchorChoice = anchorChoice;
             return {
@@ -2803,51 +2616,51 @@ exports.prepareAnchorLines = (anchor, anchorPos) => {
         }
         else if (utils$1.typeOf(anchorChoice) === "object") {
             if (!anchorChoice.offset)
-                anchorChoice.offset = { rightness: 0, bottomness: 0 };
+                { anchorChoice.offset = { rightness: 0, bottomness: 0 }; }
             if (!anchorChoice.offset.bottomness)
-                anchorChoice.offset.bottomness = 0;
+                { anchorChoice.offset.bottomness = 0; }
             if (!anchorChoice.offset.rightness)
-                anchorChoice.offset.rightness = 0;
+                { anchorChoice.offset.rightness = 0; }
             anchorChoice = anchorChoice;
             return anchorChoice;
         }
     });
     //now build the object that represents the users possibilities for different anchors
-    let anchorPossibilities = [];
-    if (anchorChoiceMapped.map((a) => a.position).includes("auto")) {
-        let autoAnchor = anchorChoiceMapped.find((a) => a.position === "auto");
-        ["left", "right", "top", "bottom"].forEach((anchor) => {
-            let offset = defsOffsets[anchor];
+    var anchorPossibilities = [];
+    if (anchorChoiceMapped.map(function (a) { return a.position; }).includes("auto")) {
+        var autoAnchor = anchorChoiceMapped.find(function (a) { return a.position === "auto"; });
+        ["left", "right", "top", "bottom"].forEach(function (anchor) {
+            var offset = defsOffsets[anchor];
             offset.rightness += autoAnchor.offset.rightness;
             offset.bottomness += autoAnchor.offset.bottomness;
-            anchorPossibilities.push({ position: anchor, offset });
+            anchorPossibilities.push({ position: anchor, offset: offset });
         });
     }
     else {
-        anchorChoiceMapped.forEach((customAnchor) => {
-            let offset = defsOffsets[customAnchor.position];
+        anchorChoiceMapped.forEach(function (customAnchor) {
+            var offset = defsOffsets[customAnchor.position];
             offset.rightness += customAnchor.offset.rightness;
             offset.bottomness += customAnchor.offset.bottomness;
-            anchorPossibilities.push({ position: customAnchor.position, offset });
+            anchorPossibilities.push({ position: customAnchor.position, offset: offset });
         });
     }
     // now prepare this list of anchors to object expected by the `getShortestLine` function
-    return anchorPossibilities.map((pos) => ({
+    return anchorPossibilities.map(function (pos) { return ({
         x: anchorPos.x + pos.offset.rightness,
         y: anchorPos.y + pos.offset.bottomness,
         anchorPosition: pos.position,
-    }));
+    }); });
 };
-const dist = (p1, p2) => {
+var dist = function (p1, p2) {
     //length of line
     return Math.sqrt(Math.pow((p1.x - p2.x), 2) + Math.pow((p1.y - p2.y), 2));
 };
-exports.getShortestLine = (sPoints, ePoints) => {
+exports.getShortestLine = function (sPoints, ePoints) {
     // closes tPair Of Points which feet to the specified anchors
-    let minDist = Infinity, d = Infinity;
-    let closestPair;
-    sPoints.forEach((sp) => {
-        ePoints.forEach((ep) => {
+    var minDist = Infinity, d = Infinity;
+    var closestPair;
+    sPoints.forEach(function (sp) {
+        ePoints.forEach(function (ep) {
             d = dist(sp, ep);
             if (d < minDist) {
                 minDist = d;
@@ -2867,10 +2680,10 @@ anchors.prepareAnchorLines;
 var lib = createCommonjsModule(function (module, exports) {
 //// @ts-nocheck
 var __createBinding = (commonjsGlobal$1 && commonjsGlobal$1.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
+    if (k2 === undefined) { k2 = k; }
     Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
 }) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
+    if (k2 === undefined) { k2 = k; }
     o[k2] = m[k];
 }));
 var __setModuleDefault = (commonjsGlobal$1 && commonjsGlobal$1.__setModuleDefault) || (Object.create ? (function(o, v) {
@@ -2879,92 +2692,117 @@ var __setModuleDefault = (commonjsGlobal$1 && commonjsGlobal$1.__setModuleDefaul
     o["default"] = v;
 });
 var __importStar = (commonjsGlobal$1 && commonjsGlobal$1.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
+    if (mod && mod.__esModule) { return mod; }
     var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    if (mod != null) { for (var k in mod) { if (k !== "default" && Object.hasOwnProperty.call(mod, k)) { __createBinding(result, mod, k); } } }
     __setModuleDefault(result, mod);
     return result;
 };
 var __rest = (commonjsGlobal$1 && commonjsGlobal$1.__rest) || function (s, e) {
     var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
+    for (var p in s) { if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        { t[p] = s[p]; } }
     if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+        { for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
             if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
+                { t[p[i]] = s[p[i]]; }
+        } }
     return t;
 };
 var __importDefault = (commonjsGlobal$1 && commonjsGlobal$1.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importStar(React__default['default']);
-const lodash_isequal_1 = __importDefault(lodash_isequal);
-const lodash_pick_1 = __importDefault(lodash_pick);
+var react_1 = __importStar(React__default['default']);
+var lodash_isequal_1 = __importDefault(lodash_isequal);
+var lodash_pick_1 = __importDefault(lodash_pick);
 
-const prop_types_1 = __importDefault(propTypes);
+var prop_types_1 = __importDefault(propTypes);
 
 
-const Xarrow = (props) => {
-    let { startAnchor, endAnchor, label, color, lineColor, headColor, strokeWidth, headSize, path, curveness, dashness, passProps, SVGcanvasProps, arrowBodyProps, arrowHeadProps, divContainerProps, extendSVGcanvas } = props, extraProps = __rest(props, ["startAnchor", "endAnchor", "label", "color", "lineColor", "headColor", "strokeWidth", "headSize", "path", "curveness", "dashness", "passProps", "SVGcanvasProps", "arrowBodyProps", "arrowHeadProps", "divContainerProps", "extendSVGcanvas"]);
-    const selfRef = react_1.useRef(null);
-    const [anchorsRefs, setAnchorsRefs] = react_1.useState({ start: null, end: null });
-    const [prevPosState, setPrevPosState] = react_1.useState(null);
-    const [prevProps, setPrevProps] = react_1.useState(null);
+var Xarrow = function (props) {
+    var assign;
+
+    var startAnchor = props.startAnchor;
+    var endAnchor = props.endAnchor;
+    var label = props.label;
+    var color = props.color;
+    var lineColor = props.lineColor;
+    var headColor = props.headColor;
+    var strokeWidth = props.strokeWidth;
+    var headSize = props.headSize;
+    var path = props.path;
+    var curveness = props.curveness;
+    var dashness = props.dashness;
+    var passProps = props.passProps;
+    var SVGcanvasProps = props.SVGcanvasProps;
+    var arrowBodyProps = props.arrowBodyProps;
+    var arrowHeadProps = props.arrowHeadProps;
+    var divContainerProps = props.divContainerProps;
+    var extendSVGcanvas = props.extendSVGcanvas;
+    var extraProps = __rest(props, ["startAnchor", "endAnchor", "label", "color", "lineColor", "headColor", "strokeWidth", "headSize", "path", "curveness", "dashness", "passProps", "SVGcanvasProps", "arrowBodyProps", "arrowHeadProps", "divContainerProps", "extendSVGcanvas"]);
+    var selfRef = react_1.useRef(null);
+    var ref = react_1.useState({ start: null, end: null });
+    var anchorsRefs = ref[0];
+    var setAnchorsRefs = ref[1];
+    var ref$1 = react_1.useState(null);
+    var prevPosState = ref$1[0];
+    var setPrevPosState = ref$1[1];
+    var ref$2 = react_1.useState(null);
+    var prevProps = ref$2[0];
+    var setPrevProps = ref$2[1];
     /**
      * determine a an update is needed and update if so.
      * update is needed if one of the connected elements position was changed since last render, or if the ref to one
      * of the elements has changed(it points to a different element).
      */
-    const updateIfNeeded = () => {
+    var updateIfNeeded = function () {
         // check if anchors refs changed
-        const start = utils$2.getElementByPropGiven(props.start);
-        const end = utils$2.getElementByPropGiven(props.end);
+        var start = utils$2.getElementByPropGiven(props.start);
+        var end = utils$2.getElementByPropGiven(props.end);
         // in case one of the elements does not mounted skip any update
         if (start == null || end == null)
-            return;
+            { return; }
         // if anchors changed re-set them
-        if (!lodash_isequal_1.default(anchorsRefs, { start, end })) {
+        if (!lodash_isequal_1.default(anchorsRefs, { start: start, end: end })) {
             initAnchorsRefs();
         }
         else if (!lodash_isequal_1.default(props, prevProps)) {
             //first check if any properties changed
             if (prevProps) {
                 initProps();
-                let posState = getAnchorsPos();
+                var posState = getAnchorsPos();
                 setPrevPosState(posState);
                 updatePosition(posState);
             }
         }
         else {
             //if the properties did not changed - update position if needed
-            let posState = getAnchorsPos();
-            if (!lodash_isequal_1.default(prevPosState, posState)) {
-                setPrevPosState(posState);
-                updatePosition(posState);
+            var posState$1 = getAnchorsPos();
+            if (!lodash_isequal_1.default(prevPosState, posState$1)) {
+                setPrevPosState(posState$1);
+                updatePosition(posState$1);
             }
         }
     };
-    const initAnchorsRefs = () => {
-        const start = utils$2.getElementByPropGiven(props.start);
-        const end = utils$2.getElementByPropGiven(props.end);
-        setAnchorsRefs({ start, end });
+    var initAnchorsRefs = function () {
+        var start = utils$2.getElementByPropGiven(props.start);
+        var end = utils$2.getElementByPropGiven(props.end);
+        setAnchorsRefs({ start: start, end: end });
     };
-    const initProps = () => {
+    var initProps = function () {
         setPrevProps(props);
     };
-    react_1.useEffect(() => {
+    react_1.useEffect(function () {
         // console.log("xarrow mounted");
         initProps();
         initAnchorsRefs();
     }, []);
-    react_1.useLayoutEffect(() => {
+    react_1.useLayoutEffect(function () {
         // console.log("xarrow rendered!");
         updateIfNeeded();
     });
-    const [st, setSt] = react_1.useState({
+    var ref$3 = react_1.useState({
         //initial state
         cx0: 0,
         cy0: 0,
@@ -2994,11 +2832,13 @@ const Xarrow = (props) => {
         excUp: 0,
         excDown: 0,
     });
+    var st = ref$3[0];
+    var setSt = ref$3[1];
     headSize = Number(headSize);
     strokeWidth = Number(strokeWidth);
     headColor = headColor ? headColor : color;
     lineColor = lineColor ? lineColor : color;
-    let dashStroke = 0, dashNone = 0, animationSpeed, animationDirection = 1;
+    var dashStroke = 0, dashNone = 0, animationSpeed, animationDirection = 1;
     if (dashness) {
         if (typeof dashness === "object") {
             dashStroke = dashness.strokeLen
@@ -3015,33 +2855,35 @@ const Xarrow = (props) => {
             animationSpeed = null;
         }
     }
-    let dashoffset = dashStroke + dashNone;
+    var dashoffset = dashStroke + dashNone;
     if (animationSpeed < 0) {
         animationSpeed *= -1;
         animationDirection = -1;
     }
-    let labelStart = null, labelMiddle = null, labelEnd = null;
+    var labelStart = null, labelMiddle = null, labelEnd = null;
     if (label) {
         if (typeof label === "string" || "type" in label)
-            labelMiddle = label;
-        else if (["start", "middle", "end"].some((key) => key in label)) {
+            { labelMiddle = label; }
+        else if (["start", "middle", "end"].some(function (key) { return key in label; })) {
             label = label;
-            ({ start: labelStart, middle: labelMiddle, end: labelEnd } = label);
+            ((assign = label, labelStart = assign.start, labelMiddle = assign.middle, labelEnd = assign.end));
         }
     }
-    const getSelfPos = () => {
-        let { left: xarrowElemX, top: xarrowElemY, } = selfRef.current.getBoundingClientRect();
-        let xarrowStyle = getComputedStyle(selfRef.current);
-        let xarrowStyleLeft = Number(xarrowStyle.left.slice(0, -2));
-        let xarrowStyleTop = Number(xarrowStyle.top.slice(0, -2));
+    var getSelfPos = function () {
+        var ref = selfRef.current.getBoundingClientRect();
+        var xarrowElemX = ref.left;
+        var xarrowElemY = ref.top;
+        var xarrowStyle = getComputedStyle(selfRef.current);
+        var xarrowStyleLeft = Number(xarrowStyle.left.slice(0, -2));
+        var xarrowStyleTop = Number(xarrowStyle.top.slice(0, -2));
         return {
             x: xarrowElemX - xarrowStyleLeft,
             y: xarrowElemY - xarrowStyleTop,
         };
     };
-    const getAnchorsPos = () => {
-        let s = anchorsRefs.start.getBoundingClientRect();
-        let e = anchorsRefs.end.getBoundingClientRect();
+    var getAnchorsPos = function () {
+        var s = anchorsRefs.start.getBoundingClientRect();
+        var e = anchorsRefs.end.getBoundingClientRect();
         return {
             start: {
                 x: s.left,
@@ -3061,61 +2903,65 @@ const Xarrow = (props) => {
      * The Main logic of path calculation for the arrow.
      * calculate new path and adjust canvas based on given properties.
      * */
-    const updatePosition = (positions) => {
-        let { start: sPos } = positions;
-        let { end: ePos } = positions;
-        let headOrient = 0;
+    var updatePosition = function (positions) {
+        var assign, assign$1;
+
+        var sPos = positions.start;
+        var ePos = positions.end;
+        var headOrient = 0;
         // convert startAnchor and endAnchor to list of objects represents allowed anchors.
-        let startPointsObj = anchors.prepareAnchorLines(startAnchor, sPos);
-        let endPointsObj = anchors.prepareAnchorLines(endAnchor, ePos);
+        var startPointsObj = anchors.prepareAnchorLines(startAnchor, sPos);
+        var endPointsObj = anchors.prepareAnchorLines(endAnchor, ePos);
         // choose the smallest path for 2 points from these possibilities.
-        let { startPointObj, endPointObj } = anchors.getShortestLine(startPointsObj, endPointsObj);
-        let startAnchorPosition = startPointObj.anchorPosition, endAnchorPosition = endPointObj.anchorPosition;
-        let startPoint = lodash_pick_1.default(startPointObj, ["x", "y"]), endPoint = lodash_pick_1.default(endPointObj, ["x", "y"]);
-        let xarrowElemPos = getSelfPos();
-        let cx0 = Math.min(startPoint.x, endPoint.x) - xarrowElemPos.x;
-        let cy0 = Math.min(startPoint.y, endPoint.y) - xarrowElemPos.y;
-        let dx = endPoint.x - startPoint.x;
-        let dy = endPoint.y - startPoint.y;
-        let absDx = Math.abs(endPoint.x - startPoint.x);
-        let absDy = Math.abs(endPoint.y - startPoint.y);
-        let xSign = dx > 0 ? 1 : -1;
-        let ySign = dy > 0 ? 1 : -1;
-        let headOffset = ((headSize * 3) / 4) * strokeWidth;
-        let cu = Number(curveness);
+        var ref = anchors.getShortestLine(startPointsObj, endPointsObj);
+        var startPointObj = ref.startPointObj;
+        var endPointObj = ref.endPointObj;
+        var startAnchorPosition = startPointObj.anchorPosition, endAnchorPosition = endPointObj.anchorPosition;
+        var startPoint = lodash_pick_1.default(startPointObj, ["x", "y"]), endPoint = lodash_pick_1.default(endPointObj, ["x", "y"]);
+        var xarrowElemPos = getSelfPos();
+        var cx0 = Math.min(startPoint.x, endPoint.x) - xarrowElemPos.x;
+        var cy0 = Math.min(startPoint.y, endPoint.y) - xarrowElemPos.y;
+        var dx = endPoint.x - startPoint.x;
+        var dy = endPoint.y - startPoint.y;
+        var absDx = Math.abs(endPoint.x - startPoint.x);
+        var absDy = Math.abs(endPoint.y - startPoint.y);
+        var xSign = dx > 0 ? 1 : -1;
+        var ySign = dy > 0 ? 1 : -1;
+        var headOffset = ((headSize * 3) / 4) * strokeWidth;
+        var cu = Number(curveness);
         if (path === "straight") {
             cu = 0;
             path = "smooth";
         }
-        let excRight = strokeWidth + (strokeWidth * headSize) / 2;
-        let excLeft = strokeWidth + (strokeWidth * headSize) / 2;
-        let excUp = strokeWidth + (strokeWidth * headSize) / 2;
-        let excDown = strokeWidth + (strokeWidth * headSize) / 2;
+        var excRight = strokeWidth + (strokeWidth * headSize) / 2;
+        var excLeft = strokeWidth + (strokeWidth * headSize) / 2;
+        var excUp = strokeWidth + (strokeWidth * headSize) / 2;
+        var excDown = strokeWidth + (strokeWidth * headSize) / 2;
         excLeft += Number(extendSVGcanvas);
         excRight += Number(extendSVGcanvas);
         excUp += Number(extendSVGcanvas);
         excDown += Number(extendSVGcanvas);
         ////////////////////////////////////
         // arrow point to point calculations
-        let x1 = 0, x2 = absDx, y1 = 0, y2 = absDy;
+        var x1 = 0, x2 = absDx, y1 = 0, y2 = absDy;
         if (dx < 0)
-            [x1, x2] = [x2, x1];
+            { (assign = [x2, x1], x1 = assign[0], x2 = assign[1]); }
         if (dy < 0)
-            [y1, y2] = [y2, y1];
+            { (assign$1 = [y2, y1], y1 = assign$1[0], y2 = assign$1[1]); }
         ////////////////////////////////////
         // arrow curviness and arrowhead placement calculations
-        let xHeadOffset = 0;
-        let yHeadOffset = 0;
+        var xHeadOffset = 0;
+        var yHeadOffset = 0;
         if (cu === 0) {
             // in case of straight path
-            let headAngel = Math.atan(absDy / absDx);
+            var headAngel = Math.atan(absDy / absDx);
             x2 -= headOffset * xSign * Math.cos(headAngel);
             y2 -= headOffset * ySign * Math.sin(headAngel);
             // cpx2 -= headOffset * xSign * Math.cos(headAngel);
             // cpy2 -= headOffset * ySign * Math.sin(headAngel);
             headAngel *= ySign;
             if (xSign < 0)
-                headAngel = (Math.PI - headAngel * xSign) * xSign;
+                { headAngel = (Math.PI - headAngel * xSign) * xSign; }
             xHeadOffset =
                 (Math.cos(headAngel) * headOffset) / 3 -
                     (Math.sin(headAngel) * (headSize * strokeWidth)) / 2;
@@ -3144,12 +2990,12 @@ const Xarrow = (props) => {
                 if (endAnchorPosition === "left") {
                     headOrient = 0;
                     if (xSign < 0)
-                        headOrient += 180;
+                        { headOrient += 180; }
                 }
                 else {
                     headOrient = 180;
                     if (xSign > 0)
-                        headOrient += 180;
+                        { headOrient += 180; }
                 }
             }
             else if (["top", "bottom"].includes(endAnchorPosition)) {
@@ -3161,22 +3007,22 @@ const Xarrow = (props) => {
                 if (endAnchorPosition === "top") {
                     headOrient = 270;
                     if (ySign > 0)
-                        headOrient += 180;
+                        { headOrient += 180; }
                 }
                 else {
                     headOrient = 90;
                     if (ySign < 0)
-                        headOrient += 180;
+                        { headOrient += 180; }
                 }
             }
         }
         // if (endAnchorPosition == startAnchorPosition) headOrient += 180;
-        let arrowHeadOffset = { x: xHeadOffset, y: yHeadOffset };
-        let cpx1 = x1, cpy1 = y1, cpx2 = x2, cpy2 = y2;
-        let curvesPossibilities = {};
+        var arrowHeadOffset = { x: xHeadOffset, y: yHeadOffset };
+        var cpx1 = x1, cpy1 = y1, cpx2 = x2, cpy2 = y2;
+        var curvesPossibilities = {};
         if (path === "smooth")
-            curvesPossibilities = {
-                hh: () => {
+            { curvesPossibilities = {
+                hh: function () {
                     //horizontal - from right to left or the opposite
                     cpx1 += absDx * cu * xSign;
                     cpx2 -= absDx * cu * xSign;
@@ -3187,75 +3033,79 @@ const Xarrow = (props) => {
                     // cpx1 += headOffset * 2 * xSign;
                     // cpx2 -= headOffset * 2 * xSign;
                 },
-                vv: () => {
+                vv: function () {
                     //vertical - from top to bottom or opposite
                     cpy1 += absDy * cu * ySign;
                     cpy2 -= absDy * cu * ySign;
                     // cpy1 += headOffset * 2 * ySign;
                     // cpy2 -= headOffset * 2 * ySign;
                 },
-                hv: () => {
+                hv: function () {
                     // start horizontally then vertically
                     // from v side to h side
                     cpx1 += absDx * cu * xSign;
                     cpy2 -= absDy * cu * ySign;
                 },
-                vh: () => {
+                vh: function () {
                     // start vertically then horizontally
                     // from h side to v side
                     cpy1 += absDy * cu * ySign;
                     cpx2 -= absDx * cu * xSign;
                 },
-            };
+            }; }
         else if (path === "grid") {
             curvesPossibilities = {
-                hh: () => {
+                hh: function () {
                     cpx1 += (absDx * 0.5 - headOffset / 2) * xSign;
                     cpx2 -= (absDx * 0.5 - headOffset / 2) * xSign;
                 },
-                vv: () => {
+                vv: function () {
                     cpy1 += (absDy * 0.5 - headOffset / 2) * ySign;
                     cpy2 -= (absDy * 0.5 - headOffset / 2) * ySign;
                 },
-                hv: () => {
+                hv: function () {
                     cpx1 = x2;
                 },
-                vh: () => {
+                vh: function () {
                     cpy1 = y2;
                 },
             };
         }
         // smart select best curve for the current anchors
-        let selectedCurviness = "";
+        var selectedCurviness = "";
         if (["left", "right"].includes(startAnchorPosition))
-            selectedCurviness += "h";
+            { selectedCurviness += "h"; }
         else if (["bottom", "top"].includes(startAnchorPosition))
-            selectedCurviness += "v";
+            { selectedCurviness += "v"; }
         else if (startAnchorPosition === "middle")
-            selectedCurviness += "m";
+            { selectedCurviness += "m"; }
         if (["left", "right"].includes(endAnchorPosition))
-            selectedCurviness += "h";
+            { selectedCurviness += "h"; }
         else if (["bottom", "top"].includes(endAnchorPosition))
-            selectedCurviness += "v";
+            { selectedCurviness += "v"; }
         else if (endAnchorPosition === "middle")
-            selectedCurviness += "m";
+            { selectedCurviness += "m"; }
         if (absDx > absDy)
-            selectedCurviness = selectedCurviness.replace(/m/g, "h");
+            { selectedCurviness = selectedCurviness.replace(/m/g, "h"); }
         else
-            selectedCurviness = selectedCurviness.replace(/m/g, "v");
+            { selectedCurviness = selectedCurviness.replace(/m/g, "v"); }
         curvesPossibilities[selectedCurviness]();
         ////////////////////////////////////
         // canvas smart size adjustments
-        const [xSol1, xSol2] = buzzier.buzzierMinSols(x1, cpx1, cpx2, x2);
-        const [ySol1, ySol2] = buzzier.buzzierMinSols(y1, cpy1, cpy2, y2);
+        var ref$1 = buzzier.buzzierMinSols(x1, cpx1, cpx2, x2);
+        var xSol1 = ref$1[0];
+        var xSol2 = ref$1[1];
+        var ref$2 = buzzier.buzzierMinSols(y1, cpy1, cpy2, y2);
+        var ySol1 = ref$2[0];
+        var ySol2 = ref$2[1];
         if (xSol1 < 0)
-            excLeft += -xSol1;
+            { excLeft += -xSol1; }
         if (xSol2 > absDx)
-            excRight += xSol2 - absDx;
+            { excRight += xSol2 - absDx; }
         if (ySol1 < 0)
-            excUp += -ySol1;
+            { excUp += -ySol1; }
         if (ySol2 > absDy)
-            excDown += ySol2 - absDy;
+            { excDown += ySol2 - absDy; }
         x1 += excLeft;
         x2 += excLeft;
         y1 += excUp;
@@ -3264,54 +3114,54 @@ const Xarrow = (props) => {
         cpx2 += excLeft;
         cpy1 += excUp;
         cpy2 += excUp;
-        const cw = absDx + excLeft + excRight, ch = absDy + excUp + excDown;
+        var cw = absDx + excLeft + excRight, ch = absDy + excUp + excDown;
         cx0 -= excLeft;
         cy0 -= excUp;
         //labels
-        const bzx = buzzier.bzFunction(x1, cpx1, cpx2, x2);
-        const bzy = buzzier.bzFunction(y1, cpy1, cpy2, y2);
-        const labelStartPos = { x: bzx(0.01), y: bzy(0.01) };
-        const labelMiddlePos = { x: bzx(0.5), y: bzy(0.5) };
-        const labelEndPos = { x: bzx(0.99), y: bzy(0.99) };
-        const arrowEnd = { x: bzx(1), y: bzy(1) };
+        var bzx = buzzier.bzFunction(x1, cpx1, cpx2, x2);
+        var bzy = buzzier.bzFunction(y1, cpy1, cpy2, y2);
+        var labelStartPos = { x: bzx(0.01), y: bzy(0.01) };
+        var labelMiddlePos = { x: bzx(0.5), y: bzy(0.5) };
+        var labelEndPos = { x: bzx(0.99), y: bzy(0.99) };
+        var arrowEnd = { x: bzx(1), y: bzy(1) };
         setSt({
-            cx0,
-            cy0,
-            x1,
-            x2,
-            y1,
-            y2,
-            cw,
-            ch,
-            cpx1,
-            cpy1,
-            cpx2,
-            cpy2,
-            dx,
-            dy,
-            absDx,
-            absDy,
-            headOrient,
-            labelStartPos,
-            labelMiddlePos,
-            labelEndPos,
-            arrowEnd,
-            excLeft,
-            excRight,
-            excUp,
-            excDown,
-            headOffset,
-            arrowHeadOffset,
+            cx0: cx0,
+            cy0: cy0,
+            x1: x1,
+            x2: x2,
+            y1: y1,
+            y2: y2,
+            cw: cw,
+            ch: ch,
+            cpx1: cpx1,
+            cpy1: cpy1,
+            cpx2: cpx2,
+            cpy2: cpy2,
+            dx: dx,
+            dy: dy,
+            absDx: absDx,
+            absDy: absDy,
+            headOrient: headOrient,
+            labelStartPos: labelStartPos,
+            labelMiddlePos: labelMiddlePos,
+            labelEndPos: labelEndPos,
+            arrowEnd: arrowEnd,
+            excLeft: excLeft,
+            excRight: excRight,
+            excUp: excUp,
+            excDown: excDown,
+            headOffset: headOffset,
+            arrowHeadOffset: arrowHeadOffset,
         });
     };
-    const fHeadSize = headSize * strokeWidth; //factored headsize
-    const xOffsetHead = st.x2 - st.arrowHeadOffset.x;
-    const yOffsetHead = st.y2 - st.arrowHeadOffset.y;
-    let arrowPath = `M ${st.x1} ${st.y1} C ${st.cpx1} ${st.cpy1}, ${st.cpx2} ${st.cpy2}, ${st.x2} ${st.y2} `;
+    var fHeadSize = headSize * strokeWidth; //factored headsize
+    var xOffsetHead = st.x2 - st.arrowHeadOffset.x;
+    var yOffsetHead = st.y2 - st.arrowHeadOffset.y;
+    var arrowPath = "M " + (st.x1) + " " + (st.y1) + " C " + (st.cpx1) + " " + (st.cpy1) + ", " + (st.cpx2) + " " + (st.cpy2) + ", " + (st.x2) + " " + (st.y2) + " ";
     if (path === "straight")
-        arrowPath = `M ${st.x1} ${st.y1}  ${st.x2} ${st.y2}`;
+        { arrowPath = "M " + (st.x1) + " " + (st.y1) + "  " + (st.x2) + " " + (st.y2); }
     if (path === "grid")
-        arrowPath = `M ${st.x1} ${st.y1} L  ${st.cpx1} ${st.cpy1} L ${st.cpx2} ${st.cpy2} L  ${st.x2} ${st.y2}`;
+        { arrowPath = "M " + (st.x1) + " " + (st.y1) + " L  " + (st.cpx1) + " " + (st.cpy1) + " L " + (st.cpx2) + " " + (st.cpy2) + " L  " + (st.x2) + " " + (st.y2); }
     return (react_1.default.createElement("div", Object.assign({ style: { position: "absolute" } }, divContainerProps, extraProps),
         react_1.default.createElement("svg", Object.assign({ ref: selfRef, width: st.cw, height: st.ch, style: {
                 // border: "2px yellow dashed",
@@ -3320,12 +3170,12 @@ const Xarrow = (props) => {
                 top: st.cy0,
                 pointerEvents: "none",
             }, overflow: "auto" }, SVGcanvasProps),
-            react_1.default.createElement("path", Object.assign({ d: arrowPath, stroke: lineColor, strokeDasharray: `${dashStroke} ${dashNone}`, strokeWidth: strokeWidth, fill: "transparent", 
+            react_1.default.createElement("path", Object.assign({ d: arrowPath, stroke: lineColor, strokeDasharray: (dashStroke + " " + dashNone), strokeWidth: strokeWidth, fill: "transparent", 
                 // markerEnd={`url(#${arrowHeadId})`}
-                pointerEvents: "visibleStroke" }, passProps, arrowBodyProps), animationSpeed ? (react_1.default.createElement("animate", { attributeName: "stroke-dashoffset", values: `${dashoffset * animationDirection};0`, dur: `${1 / animationSpeed}s`, repeatCount: "indefinite" })) : null),
-            react_1.default.createElement("path", Object.assign({ d: `M 0 0 L ${fHeadSize} ${fHeadSize / 2} L 0 ${fHeadSize} L ${fHeadSize / 4} ${fHeadSize / 2} z`, fill: headColor, 
+                pointerEvents: "visibleStroke" }, passProps, arrowBodyProps), animationSpeed ? (react_1.default.createElement("animate", { attributeName: "stroke-dashoffset", values: ((dashoffset * animationDirection) + ";0"), dur: ((1 / animationSpeed) + "s"), repeatCount: "indefinite" })) : null),
+            react_1.default.createElement("path", Object.assign({ d: ("M 0 0 L " + fHeadSize + " " + (fHeadSize / 2) + " L 0 " + fHeadSize + " L " + (fHeadSize / 4) + " " + (fHeadSize / 2) + " z"), fill: headColor, 
                 // pointerEvents="all"
-                transform: `translate(${xOffsetHead},${yOffsetHead}) rotate(${st.headOrient})` }, passProps, arrowHeadProps))),
+                transform: ("translate(" + xOffsetHead + "," + yOffsetHead + ") rotate(" + (st.headOrient) + ")") }, passProps, arrowHeadProps))),
         labelStart ? (react_1.default.createElement("div", { style: {
                 transform: st.dx < 0 ? "translate(-100% , -50%)" : "translate(-0% , -50%)",
                 width: "max-content",
@@ -3349,27 +3199,25 @@ const Xarrow = (props) => {
                 top: st.cy0 + st.labelEndPos.y + strokeWidth + 5,
             } }, labelEnd)) : null));
 };
-const pAnchorPositionType = prop_types_1.default.oneOf([
+var pAnchorPositionType = prop_types_1.default.oneOf([
     "middle",
     "left",
     "right",
     "top",
     "bottom",
-    "auto",
-]);
-const pAnchorCustomPositionType = prop_types_1.default.shape({
+    "auto" ]);
+var pAnchorCustomPositionType = prop_types_1.default.shape({
     position: pAnchorPositionType.isRequired,
     offset: prop_types_1.default.shape({
         rightness: prop_types_1.default.number,
         bottomness: prop_types_1.default.number,
     }),
 });
-const pAnchorType = prop_types_1.default.oneOfType([
+var pAnchorType = prop_types_1.default.oneOfType([
     pAnchorPositionType,
     pAnchorCustomPositionType,
-    prop_types_1.default.arrayOf(prop_types_1.default.oneOfType([pAnchorPositionType, pAnchorCustomPositionType])),
-]);
-const pRefType = prop_types_1.default.oneOfType([prop_types_1.default.string, prop_types_1.default.object]);
+    prop_types_1.default.arrayOf(prop_types_1.default.oneOfType([pAnchorPositionType, pAnchorCustomPositionType])) ]);
+var pRefType = prop_types_1.default.oneOfType([prop_types_1.default.string, prop_types_1.default.object]);
 Xarrow.propTypes = {
     start: pRefType.isRequired,
     end: pRefType.isRequired,
@@ -3418,9 +3266,11 @@ var Xarrow = unwrapExports(lib);
 
 var bind = function bind(fn, thisArg) {
   return function wrap() {
+    var arguments$1 = arguments;
+
     var args = new Array(arguments.length);
     for (var i = 0; i < args.length; i++) {
-      args[i] = arguments[i];
+      args[i] = arguments$1[i];
     }
     return fn.apply(thisArg, args);
   };
@@ -3698,6 +3548,8 @@ function forEach(obj, fn) {
  * @returns {Object} Result of all merge properties
  */
 function merge(/* obj1, obj2, obj3, ... */) {
+  var arguments$1 = arguments;
+
   var result = {};
   function assignValue(val, key) {
     if (isPlainObject(result[key]) && isPlainObject(val)) {
@@ -3712,7 +3564,7 @@ function merge(/* obj1, obj2, obj3, ... */) {
   }
 
   for (var i = 0, l = arguments.length; i < l; i++) {
-    forEach(arguments[i], assignValue);
+    forEach(arguments$1[i], assignValue);
   }
   return result;
 }
@@ -4898,8 +4750,10 @@ function _inheritsLoose(subClass, superClass) {
 
 function _extends() {
   _extends = Object.assign || function (target) {
+    var arguments$1 = arguments;
+
     for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
+      var source = arguments$1[i];
 
       for (var key in source) {
         if (Object.prototype.hasOwnProperty.call(source, key)) {
@@ -4929,7 +4783,7 @@ function spliceOne(list, index) {
 
 // This implementation is based heavily on node's url.parse
 function resolvePathname(to, from) {
-  if (from === undefined) from = '';
+  if (from === undefined) { from = ''; }
 
   var toParts = (to && to.split('/')) || [];
   var fromParts = (from && from.split('/')) || [];
@@ -4947,7 +4801,7 @@ function resolvePathname(to, from) {
     fromParts = fromParts.concat(toParts);
   }
 
-  if (!fromParts.length) return '/';
+  if (!fromParts.length) { return '/'; }
 
   var hasTrailingSlash;
   if (fromParts.length) {
@@ -4972,18 +4826,18 @@ function resolvePathname(to, from) {
     }
   }
 
-  if (!mustEndAbs) for (; up--; up) fromParts.unshift('..');
+  if (!mustEndAbs) { for (; up--; up) { fromParts.unshift('..'); } }
 
   if (
     mustEndAbs &&
     fromParts[0] !== '' &&
     (!fromParts[0] || !isAbsolute(fromParts[0]))
   )
-    fromParts.unshift('');
+    { fromParts.unshift(''); }
 
   var result = fromParts.join('/');
 
-  if (hasTrailingSlash && result.substr(-1) !== '/') result += '/';
+  if (hasTrailingSlash && result.substr(-1) !== '/') { result += '/'; }
 
   return result;
 }
@@ -5042,8 +4896,8 @@ function createPath(location) {
       search = location.search,
       hash = location.hash;
   var path = pathname || '/';
-  if (search && search !== '?') path += search.charAt(0) === '?' ? search : "?" + search;
-  if (hash && hash !== '#') path += hash.charAt(0) === '#' ? hash : "#" + hash;
+  if (search && search !== '?') { path += search.charAt(0) === '?' ? search : "?" + search; }
+  if (hash && hash !== '#') { path += hash.charAt(0) === '#' ? hash : "#" + hash; }
   return path;
 }
 
@@ -5057,21 +4911,21 @@ function createLocation(path, state, key, currentLocation) {
   } else {
     // One-arg form: push(location)
     location = _extends({}, path);
-    if (location.pathname === undefined) location.pathname = '';
+    if (location.pathname === undefined) { location.pathname = ''; }
 
     if (location.search) {
-      if (location.search.charAt(0) !== '?') location.search = '?' + location.search;
+      if (location.search.charAt(0) !== '?') { location.search = '?' + location.search; }
     } else {
       location.search = '';
     }
 
     if (location.hash) {
-      if (location.hash.charAt(0) !== '#') location.hash = '#' + location.hash;
+      if (location.hash.charAt(0) !== '#') { location.hash = '#' + location.hash; }
     } else {
       location.hash = '';
     }
 
-    if (state !== undefined && location.state === undefined) location.state = state;
+    if (state !== undefined && location.state === undefined) { location.state = state; }
   }
 
   try {
@@ -5084,7 +4938,7 @@ function createLocation(path, state, key, currentLocation) {
     }
   }
 
-  if (key) location.key = key;
+  if (key) { location.key = key; }
 
   if (currentLocation) {
     // Resolve incomplete/relative pathname relative to current location.
@@ -5109,7 +4963,7 @@ function createTransitionManager() {
   function setPrompt(nextPrompt) {
     prompt = nextPrompt;
     return function () {
-      if (prompt === nextPrompt) prompt = null;
+      if (prompt === nextPrompt) { prompt = null; }
     };
   }
 
@@ -5141,7 +4995,7 @@ function createTransitionManager() {
     var isActive = true;
 
     function listener() {
-      if (isActive) fn.apply(void 0, arguments);
+      if (isActive) { fn.apply(void 0, arguments); }
     }
 
     listeners.push(listener);
@@ -5154,8 +5008,10 @@ function createTransitionManager() {
   }
 
   function notifyListeners() {
+    var arguments$1 = arguments;
+
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
+      args[_key] = arguments$1[_key];
     }
 
     listeners.forEach(function (listener) {
@@ -5185,7 +5041,7 @@ function getConfirmation(message, callback) {
 
 function supportsHistory() {
   var ua = window.navigator.userAgent;
-  if ((ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) && ua.indexOf('Mobile Safari') !== -1 && ua.indexOf('Chrome') === -1 && ua.indexOf('Windows Phone') === -1) return false;
+  if ((ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) && ua.indexOf('Mobile Safari') !== -1 && ua.indexOf('Chrome') === -1 && ua.indexOf('Windows Phone') === -1) { return false; }
   return window.history && 'pushState' in window.history;
 }
 /**
@@ -5259,7 +5115,7 @@ function createBrowserHistory(props) {
         search = _window$location.search,
         hash = _window$location.hash;
     var path = pathname + search + hash;
-    if (basename) path = stripBasename$1(path, basename);
+    if (basename) { path = stripBasename$1(path, basename); }
     return createLocation(path, state, key);
   }
 
@@ -5278,7 +5134,7 @@ function createBrowserHistory(props) {
 
   function handlePopState(event) {
     // Ignore extraneous popstate events in WebKit.
-    if (isExtraneousPopstateEvent(event)) return;
+    if (isExtraneousPopstateEvent(event)) { return; }
     handlePop(getDOMLocation(event.state));
   }
 
@@ -5313,9 +5169,9 @@ function createBrowserHistory(props) {
     // Instead, we just default to 0 for keys we don't know.
 
     var toIndex = allKeys.indexOf(toLocation.key);
-    if (toIndex === -1) toIndex = 0;
+    if (toIndex === -1) { toIndex = 0; }
     var fromIndex = allKeys.indexOf(fromLocation.key);
-    if (fromIndex === -1) fromIndex = 0;
+    if (fromIndex === -1) { fromIndex = 0; }
     var delta = toIndex - fromIndex;
 
     if (delta) {
@@ -5335,7 +5191,7 @@ function createBrowserHistory(props) {
     var action = 'PUSH';
     var location = createLocation(path, state, createKey(), history.location);
     transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
-      if (!ok) return;
+      if (!ok) { return; }
       var href = createHref(location);
       var key = location.key,
           state = location.state;
@@ -5368,7 +5224,7 @@ function createBrowserHistory(props) {
     var action = 'REPLACE';
     var location = createLocation(path, state, createKey(), history.location);
     transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
-      if (!ok) return;
+      if (!ok) { return; }
       var href = createHref(location);
       var key = location.key,
           state = location.state;
@@ -5383,7 +5239,7 @@ function createBrowserHistory(props) {
           window.location.replace(href);
         } else {
           var prevIndex = allKeys.indexOf(history.location.key);
-          if (prevIndex !== -1) allKeys[prevIndex] = location.key;
+          if (prevIndex !== -1) { allKeys[prevIndex] = location.key; }
           setState({
             action: action,
             location: location
@@ -5414,10 +5270,10 @@ function createBrowserHistory(props) {
 
     if (listenerCount === 1 && delta === 1) {
       window.addEventListener(PopStateEvent, handlePopState);
-      if (needsHashChangeListener) window.addEventListener(HashChangeEvent, handleHashChange);
+      if (needsHashChangeListener) { window.addEventListener(HashChangeEvent, handleHashChange); }
     } else if (listenerCount === 0) {
       window.removeEventListener(PopStateEvent, handlePopState);
-      if (needsHashChangeListener) window.removeEventListener(HashChangeEvent, handleHashChange);
+      if (needsHashChangeListener) { window.removeEventListener(HashChangeEvent, handleHashChange); }
     }
   }
 
@@ -5531,7 +5387,7 @@ function createHashHistory(props) {
 
   function getDOMLocation() {
     var path = decodePath(getHashPath());
-    if (basename) path = stripBasename$1(path, basename);
+    if (basename) { path = stripBasename$1(path, basename); }
     return createLocation(path);
   }
 
@@ -5561,9 +5417,9 @@ function createHashHistory(props) {
     } else {
       var location = getDOMLocation();
       var prevLocation = history.location;
-      if (!forceNextPop && locationsAreEqual$$1(prevLocation, location)) return; // A hashchange doesn't always == location change.
+      if (!forceNextPop && locationsAreEqual$$1(prevLocation, location)) { return; } // A hashchange doesn't always == location change.
 
-      if (ignorePath === createPath(location)) return; // Ignore this change; we already setState in push/replace.
+      if (ignorePath === createPath(location)) { return; } // Ignore this change; we already setState in push/replace.
 
       ignorePath = null;
       handlePop(location);
@@ -5595,9 +5451,9 @@ function createHashHistory(props) {
     // Instead, we just default to 0 for paths we don't know.
 
     var toIndex = allPaths.lastIndexOf(createPath(toLocation));
-    if (toIndex === -1) toIndex = 0;
+    if (toIndex === -1) { toIndex = 0; }
     var fromIndex = allPaths.lastIndexOf(createPath(fromLocation));
-    if (fromIndex === -1) fromIndex = 0;
+    if (fromIndex === -1) { fromIndex = 0; }
     var delta = toIndex - fromIndex;
 
     if (delta) {
@@ -5609,7 +5465,7 @@ function createHashHistory(props) {
 
   var path = getHashPath();
   var encodedPath = encodePath(path);
-  if (path !== encodedPath) replaceHashPath(encodedPath);
+  if (path !== encodedPath) { replaceHashPath(encodedPath); }
   var initialLocation = getDOMLocation();
   var allPaths = [createPath(initialLocation)]; // Public interface
 
@@ -5628,7 +5484,7 @@ function createHashHistory(props) {
     var action = 'PUSH';
     var location = createLocation(path, undefined, undefined, history.location);
     transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
-      if (!ok) return;
+      if (!ok) { return; }
       var path = createPath(location);
       var encodedPath = encodePath(basename + path);
       var hashChanged = getHashPath() !== encodedPath;
@@ -5657,7 +5513,7 @@ function createHashHistory(props) {
     var action = 'REPLACE';
     var location = createLocation(path, undefined, undefined, history.location);
     transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
-      if (!ok) return;
+      if (!ok) { return; }
       var path = createPath(location);
       var encodedPath = encodePath(basename + path);
       var hashChanged = getHashPath() !== encodedPath;
@@ -5671,7 +5527,7 @@ function createHashHistory(props) {
       }
 
       var prevIndex = allPaths.indexOf(createPath(history.location));
-      if (prevIndex !== -1) allPaths[prevIndex] = path;
+      if (prevIndex !== -1) { allPaths[prevIndex] = path; }
       setState({
         action: action,
         location: location
@@ -5797,7 +5653,7 @@ function createMemoryHistory(props) {
     var action = 'PUSH';
     var location = createLocation(path, state, createKey(), history.location);
     transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
-      if (!ok) return;
+      if (!ok) { return; }
       var prevIndex = history.index;
       var nextIndex = prevIndex + 1;
       var nextEntries = history.entries.slice(0);
@@ -5821,7 +5677,7 @@ function createMemoryHistory(props) {
     var action = 'REPLACE';
     var location = createLocation(path, state, createKey(), history.location);
     transitionManager.confirmTransitionTo(location, action, getUserConfirmation, function (ok) {
-      if (!ok) return;
+      if (!ok) { return; }
       history.entries[history.index] = location;
       setState({
         action: action,
@@ -6547,14 +6403,14 @@ var reactIs = createCommonjsModule(function (module) {
 reactIs.isValidElementType;
 
 function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
+  if (source == null) { return {}; }
   var target = {};
   var sourceKeys = Object.keys(source);
   var key, i;
 
   for (i = 0; i < sourceKeys.length; i++) {
     key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
+    if (excluded.indexOf(key) >= 0) { continue; }
     target[key] = source[key];
   }
 
@@ -6665,7 +6521,7 @@ function (_React$Component) {
   };
 
   _proto.componentWillUnmount = function componentWillUnmount() {
-    if (this.unlisten) this.unlisten();
+    if (this.unlisten) { this.unlisten(); }
   };
 
   _proto.render = function render() {
@@ -6694,10 +6550,12 @@ function (_React$Component) {
   _inheritsLoose(MemoryRouter, _React$Component);
 
   function MemoryRouter() {
+    var arguments$1 = arguments;
+
     var _this;
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
+      args[_key] = arguments$1[_key];
     }
 
     _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
@@ -6728,15 +6586,15 @@ function (_React$Component) {
   var _proto = Lifecycle.prototype;
 
   _proto.componentDidMount = function componentDidMount() {
-    if (this.props.onMount) this.props.onMount.call(this, this);
+    if (this.props.onMount) { this.props.onMount.call(this, this); }
   };
 
   _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
-    if (this.props.onUpdate) this.props.onUpdate.call(this, this, prevProps);
+    if (this.props.onUpdate) { this.props.onUpdate.call(this, this, prevProps); }
   };
 
   _proto.componentWillUnmount = function componentWillUnmount() {
-    if (this.props.onUnmount) this.props.onUnmount.call(this, this);
+    if (this.props.onUnmount) { this.props.onUnmount.call(this, this); }
   };
 
   _proto.render = function render() {
@@ -6753,7 +6611,7 @@ var cacheCount$1 = 0;
 function compilePath$1(path, options) {
   var cacheKey = "" + options.end + options.strict + options.sensitive;
   var pathCache = cache$1[cacheKey] || (cache$1[cacheKey] = {});
-  if (pathCache[path]) return pathCache[path];
+  if (pathCache[path]) { return pathCache[path]; }
   var keys = [];
   var regexp = pathToRegexp_1(path, keys, options);
   var result = {
@@ -6794,8 +6652,8 @@ function matchPath(pathname, options) {
       sensitive = _options$sensitive === void 0 ? false : _options$sensitive;
   var paths = [].concat(path);
   return paths.reduce(function (matched, path) {
-    if (!path && path !== "") return null;
-    if (matched) return matched;
+    if (!path && path !== "") { return null; }
+    if (matched) { return matched; }
 
     var _compilePath = compilePath$1(path, {
       end: exact,
@@ -6806,11 +6664,11 @@ function matchPath(pathname, options) {
         keys = _compilePath.keys;
 
     var match = regexp.exec(pathname);
-    if (!match) return null;
+    if (!match) { return null; }
     var url = match[0],
         values = match.slice(1);
     var isExact = pathname === url;
-    if (exact && !isExact) return null;
+    if (exact && !isExact) { return null; }
     return {
       path: path,
       // the path used to match
@@ -6879,16 +6737,16 @@ function addLeadingSlash(path) {
 }
 
 function addBasename(basename, location) {
-  if (!basename) return location;
+  if (!basename) { return location; }
   return _extends({}, location, {
     pathname: addLeadingSlash(basename) + location.pathname
   });
 }
 
 function stripBasename(basename, location) {
-  if (!basename) return location;
+  if (!basename) { return location; }
   var base = addLeadingSlash(basename);
-  if (location.pathname.indexOf(base) !== 0) return location;
+  if (location.pathname.indexOf(base) !== 0) { return location; }
   return _extends({}, location, {
     pathname: location.pathname.substr(base.length)
   });
@@ -6918,10 +6776,12 @@ function noop() {}
   _inheritsLoose(StaticRouter, _React$Component);
 
   function StaticRouter() {
+    var arguments$1 = arguments;
+
     var _this;
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
+      args[_key] = arguments$1[_key];
     }
 
     _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
@@ -7048,10 +6908,12 @@ function (_React$Component) {
   _inheritsLoose(BrowserRouter, _React$Component);
 
   function BrowserRouter() {
+    var arguments$1 = arguments;
+
     var _this;
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
+      args[_key] = arguments$1[_key];
     }
 
     _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
@@ -7080,10 +6942,12 @@ function (_React$Component) {
   _inheritsLoose(HashRouter, _React$Component);
 
   function HashRouter() {
+    var arguments$1 = arguments;
+
     var _this;
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
+      args[_key] = arguments$1[_key];
     }
 
     _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
@@ -7135,7 +6999,7 @@ var LinkAnchor = forwardRef(function (_ref, forwardedRef) {
   var props = _extends({}, rest, {
     onClick: function onClick(event) {
       try {
-        if (_onClick) _onClick(event);
+        if (_onClick) { _onClick(event); }
       } catch (ex) {
         event.preventDefault();
         throw ex;
@@ -7213,8 +7077,10 @@ if (typeof forwardRef$1 === "undefined") {
 }
 
 function joinClassnames() {
+  var arguments$1 = arguments;
+
   for (var _len = arguments.length, classnames = new Array(_len), _key = 0; _key < _len; _key++) {
-    classnames[_key] = arguments[_key];
+    classnames[_key] = arguments$1[_key];
   }
 
   return classnames.filter(function (i) {
@@ -7280,430 +7146,371 @@ forwardRef$1(function (_ref, forwardedRef) {
 
 var React$2 = window.React;
 
-var PipelineData = /*#__PURE__*/function (_React$Component) {
-  _inherits(PipelineData, _React$Component);
-
-  var _super = _createSuper(PipelineData);
-
+var PipelineData = /*@__PURE__*/function (superclass) {
   function PipelineData(props) {
-    _classCallCheck(this, PipelineData);
-
-    return _super.call(this, props);
+    superclass.call(this, props);
   }
 
-  _createClass(PipelineData, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React$2.createElement("div", null, /*#__PURE__*/React$2.createElement("h1", null, this.props.title), /*#__PURE__*/React$2.createElement("div", null, "Branch - ", this.props.branch), /*#__PURE__*/React$2.createElement("div", null, "Owner - ", this.props.owner));
-    }
-  }]);
+  if (superclass) PipelineData.__proto__ = superclass;
+  PipelineData.prototype = Object.create(superclass && superclass.prototype);
+  PipelineData.prototype.constructor = PipelineData;
+
+  PipelineData.prototype.render = function render() {
+    return React$2.createElement('div', null, React$2.createElement('h1', null, this.props.title), React$2.createElement('div', null, "Branch - ", this.props.branch), React$2.createElement('div', null, "Owner - ", this.props.owner));
+  };
 
   return PipelineData;
 }(React$2.Component);
 
-var Job = /*#__PURE__*/function (_React$Component2) {
-  _inherits(Job, _React$Component2);
-
-  var _super2 = _createSuper(Job);
-
+var Job = /*@__PURE__*/function (superclass) {
   function Job(props) {
-    _classCallCheck(this, Job);
-
-    return _super2.call(this, props);
+    superclass.call(this, props);
   }
 
-  _createClass(Job, [{
-    key: "getStatusColor",
-    value: function getStatusColor() {
-      // Get the status based on the ID
-      if (this.props.status == "RUNNING") {
-        return "orange";
-      } else if (this.props.status == "PASSED") {
-        return "green";
-      }
+  if (superclass) Job.__proto__ = superclass;
+  Job.prototype = Object.create(superclass && superclass.prototype);
+  Job.prototype.constructor = Job;
 
-      return "red";
+  Job.prototype.getStatusColor = function getStatusColor() {
+    // Get the status based on the ID
+    if (this.props.status == "RUNNING") {
+      return "orange";
+    } else if (this.props.status == "PASSED") {
+      return "green";
     }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React$2.createElement("div", {
-        className: "job"
-      }, /*#__PURE__*/React$2.createElement("div", {
-        className: "job-name"
-      }, this.props.name), /*#__PURE__*/React$2.createElement("div", {
-        style: {
-          color: this.getStatusColor()
-        },
-        className: "job-status"
-      }, this.props.status, " - ", this.props.build), /*#__PURE__*/React$2.createElement("div", {
-        className: "job-completion-time"
-      }, this.props.time_verbose), /*#__PURE__*/React$2.createElement("a", {
-        href: "/job/details/",
-        className: "job-detail blue-tag"
-      }, "Details"));
-    }
-  }]);
+
+    return "red";
+  };
+
+  Job.prototype.render = function render() {
+    return React$2.createElement('div', {
+      className: "job"
+    }, React$2.createElement('div', {
+      className: "job-name"
+    }, this.props.name), React$2.createElement('div', {
+      style: {
+        color: this.getStatusColor()
+      },
+      className: "job-status"
+    }, this.props.status, " - ", this.props.build), React$2.createElement('div', {
+      className: "job-completion-time"
+    }, this.props.time_verbose), React$2.createElement('a', {
+      href: "/job/details/",
+      className: "job-detail blue-tag"
+    }, "Details"));
+  };
 
   return Job;
 }(React$2.Component);
 
-var StageStatus = /*#__PURE__*/function (_React$Component3) {
-  _inherits(StageStatus, _React$Component3);
-
-  var _super3 = _createSuper(StageStatus);
-
+var StageStatus = /*@__PURE__*/function (superclass) {
   function StageStatus(props) {
-    _classCallCheck(this, StageStatus);
-
-    return _super3.call(this, props);
+    superclass.call(this, props);
   }
 
-  _createClass(StageStatus, [{
-    key: "getStatusColor",
-    value: function getStatusColor() {
-      // Get the status based on the ID
-      if (this.props.status == "RUNNING") {
-        return "orange";
-      } else if (this.props.status == "SUCCESS") {
-        return "green";
-      }
+  if (superclass) StageStatus.__proto__ = superclass;
+  StageStatus.prototype = Object.create(superclass && superclass.prototype);
+  StageStatus.prototype.constructor = StageStatus;
 
-      return "red";
+  StageStatus.prototype.getStatusColor = function getStatusColor() {
+    // Get the status based on the ID
+    if (this.props.status == "RUNNING") {
+      return "orange";
+    } else if (this.props.status == "SUCCESS") {
+      return "green";
     }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React$2.createElement("span", {
-        className: "stage-status",
-        style: {
-          background: this.getStatusColor()
-        }
-      });
-    }
-  }]);
+
+    return "red";
+  };
+
+  StageStatus.prototype.render = function render() {
+    return React$2.createElement('span', {
+      className: "stage-status",
+      style: {
+        background: this.getStatusColor()
+      }
+    });
+  };
 
   return StageStatus;
 }(React$2.Component);
 
-var Stage = /*#__PURE__*/function (_React$Component4) {
-  _inherits(Stage, _React$Component4);
-
-  var _super4 = _createSuper(Stage);
-
+var Stage = /*@__PURE__*/function (superclass) {
   function Stage(props) {
-    var _this;
-
-    _classCallCheck(this, Stage);
-
-    _this = _super4.call(this, props);
-    _this.positionX = 0;
-    _this.positionY = 0;
-    _this.state = {
+    superclass.call(this, props);
+    this.positionX = 0;
+    this.positionY = 0;
+    this.state = {
       jobs: [],
       status: "NOT_FOUND"
     };
-    _this.getJobData = _this.getJobData.bind(_assertThisInitialized(_this));
-    _this.getStageStatus = _this.getStageStatus.bind(_assertThisInitialized(_this));
-
-    _this.getJobData();
-
-    _this.getStageStatus();
-
-    return _this;
+    this.getJobData = this.getJobData.bind(this);
+    this.getStageStatus = this.getStageStatus.bind(this);
+    this.getJobData();
+    this.getStageStatus();
   }
 
-  _createClass(Stage, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var rect = this.props.reference;
+  if (superclass) Stage.__proto__ = superclass;
+  Stage.prototype = Object.create(superclass && superclass.prototype);
+  Stage.prototype.constructor = Stage;
 
-      if (rect.current) {
-        console.log(rect.current);
-      }
+  Stage.prototype.componentDidMount = function componentDidMount() {
+    var rect = this.props.reference;
+
+    if (rect.current) {
+      console.log(rect.current);
     }
-  }, {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      var rect = this.props.reference;
+  };
 
-      if (rect.current) {
-        console.log(rect.current);
-      }
+  Stage.prototype.componentDidUpdate = function componentDidUpdate() {
+    var rect = this.props.reference;
+
+    if (rect.current) {
+      console.log(rect.current);
     }
-  }, {
-    key: "getStageStatus",
-    value: function getStageStatus() {
-      var _this2 = this;
+  };
 
-      axios.get("http://127.0.0.1:5000/stage/status/" + this.props.id).then(function (data) {
-        _this2.setState({
-          status: data.data
-        });
+  Stage.prototype.getStageStatus = function getStageStatus() {
+    var this$1 = this;
+    axios.get("http://127.0.0.1:5000/stage/status/" + this.props.id).then(function (data) {
+      this$1.setState({
+        status: data.data
       });
-    }
-  }, {
-    key: "getJobData",
-    value: function getJobData() {
-      var _this3 = this;
+    });
+  };
 
-      /*
-      return [
-          {
-              "status": "PASSED",
-              "name": "P0 Acceptance Test",
-              "build": "6.0-1537",
-              "time_verbose": "Completed 10 mins ago"
-          },
-          {
-               "status": "FAILED",
-              "name": "P1 Acceptance Test",
-              "build": "6.0-1537",
-              "time_verbose": "Completed 5 mins ago"
-          }
-      ]*/
-      axios.get("http://127.0.0.1:5000/stage/jobs/" + this.props.id).then(function (data) {
-        _this3.setState({
-          jobs: data.data
-        });
-      });
-    }
-  }, {
-    key: "renderJobs",
-    value: function renderJobs() {
-      var jobs = []; //const jobsData = this.getJobData();
-
-      var _iterator = _createForOfIteratorHelper(this.state.jobs),
-          _step;
-
-      try {
-        for (_iterator.s(); !(_step = _iterator.n()).done;) {
-          var jobData = _step.value;
-          jobs.push( /*#__PURE__*/React$2.createElement(Job, {
-            name: jobData["name"],
-            status: jobData["status"],
-            build: jobData["build"],
-            time_verbose: jobData["time_verbose"]
-          }));
+  Stage.prototype.getJobData = function getJobData() {
+    var this$1 = this;
+    /*
+    return [
+        {
+            "status": "PASSED",
+            "name": "P0 Acceptance Test",
+            "build": "6.0-1537",
+            "time_verbose": "Completed 10 mins ago"
+        },
+        {
+             "status": "FAILED",
+            "name": "P1 Acceptance Test",
+            "build": "6.0-1537",
+            "time_verbose": "Completed 5 mins ago"
         }
-      } catch (err) {
-        _iterator.e(err);
-      } finally {
-        _iterator.f();
-      }
+    ]*/
 
-      return jobs;
+    axios.get("http://127.0.0.1:5000/stage/jobs/" + this.props.id).then(function (data) {
+      this$1.setState({
+        jobs: data.data
+      });
+    });
+  };
+
+  Stage.prototype.renderJobs = function renderJobs() {
+    var jobs = []; //const jobsData = this.getJobData();
+
+    for (var index in this.state.jobs) {
+      var jobData = this.state.jobs[index];
+      jobs.push(React$2.createElement(Job, {
+        name: jobData["name"],
+        status: jobData["status"],
+        build: jobData["build"],
+        time_verbose: jobData["time_verbose"]
+      }));
     }
-  }, {
-    key: "getStageName",
-    value: function getStageName() {
-      // Get name of the stage based on the id
-      return this.props.id;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React$2.createElement("span", {
-        id: this.props.id,
-        ref: this.props.reference,
-        className: "stage"
-      }, /*#__PURE__*/React$2.createElement("span", {
-        className: "stage-data"
-      }, /*#__PURE__*/React$2.createElement(StageStatus, {
-        status: this.state.status
-      }), /*#__PURE__*/React$2.createElement("div", {
-        className: "stage-container"
-      }, /*#__PURE__*/React$2.createElement("div", {
-        className: "stage-header"
-      }, /*#__PURE__*/React$2.createElement("span", {
-        className: "float-left font-size-20 stage-name"
-      }, this.getStageName()), /*#__PURE__*/React$2.createElement("span", {
-        className: "stage-right"
-      }, /*#__PURE__*/React$2.createElement("a", {
-        href: "/stage/history/",
-        className: "blue-tag"
-      }, "History"))), /*#__PURE__*/React$2.createElement("div", {
-        className: "stage-body"
-      }, /*#__PURE__*/React$2.createElement("div", {
-        className: "jobs-container"
-      }, this.renderJobs())), /*#__PURE__*/React$2.createElement("div", {
-        className: "stage-tail"
-      }, /*#__PURE__*/React$2.createElement("span", {
-        className: "float-left blue-tag promotion-criteria"
-      }, /*#__PURE__*/React$2.createElement("a", {
-        href: "/stage/promotion-criteria/"
-      }, "Promotion Criteria"))))));
-    }
-  }]);
+
+    return jobs;
+  };
+
+  Stage.prototype.getStageName = function getStageName() {
+    // Get name of the stage based on the id
+    return this.props.id;
+  };
+
+  Stage.prototype.render = function render() {
+    return React$2.createElement('span', {
+      id: this.props.id,
+      ref: this.props.reference,
+      className: "stage"
+    }, React$2.createElement('span', {
+      className: "stage-data"
+    }, React$2.createElement(StageStatus, {
+      status: this.state.status
+    }), React$2.createElement('div', {
+      className: "stage-container"
+    }, React$2.createElement('div', {
+      className: "stage-header"
+    }, React$2.createElement('span', {
+      className: "float-left font-size-20 stage-name"
+    }, this.getStageName()), React$2.createElement('span', {
+      className: "stage-right"
+    }, React$2.createElement('a', {
+      href: "/stage/history/",
+      className: "blue-tag"
+    }, "History"))), React$2.createElement('div', {
+      className: "stage-body"
+    }, React$2.createElement('div', {
+      className: "jobs-container"
+    }, this.renderJobs())), React$2.createElement('div', {
+      className: "stage-tail"
+    }, React$2.createElement('span', {
+      className: "float-left blue-tag promotion-criteria"
+    }, React$2.createElement('a', {
+      href: "/stage/promotion-criteria/"
+    }, "Promotion Criteria"))))));
+  };
 
   return Stage;
 }(React$2.Component);
 
-var PipelineView = /*#__PURE__*/function (_React$Component5) {
-  _inherits(PipelineView, _React$Component5);
-
-  var _super5 = _createSuper(PipelineView);
-
+var PipelineView = /*@__PURE__*/function (superclass) {
   function PipelineView(props) {
-    var _this4;
-
-    _classCallCheck(this, PipelineView);
-
-    _this4 = _super5.call(this, props);
-    _this4.state = {};
-    _this4.stageMap = {};
-    _this4.state = {
+    superclass.call(this, props);
+    this.state = {};
+    this.stageMap = {};
+    this.state = {
       startNode: null,
       adjList: {}
     };
-    _this4.refIndex = 0;
-
-    _this4.getStagesStructure();
-
-    return _this4;
+    this.refIndex = 0;
+    this.getStagesStructure();
   }
 
-  _createClass(PipelineView, [{
-    key: "getStagesStructure",
-    value: function getStagesStructure() {
-      var _this5 = this;
+  if (superclass) PipelineView.__proto__ = superclass;
+  PipelineView.prototype = Object.create(superclass && superclass.prototype);
+  PipelineView.prototype.constructor = PipelineView;
 
-      /*
-      return {
-          start: "A",
-          dependencies: [
-              {
-                  from: "A",
-                  to: "B"
-              },
-              {
-                  from: "B",
-                  to: "C"
-              },
-              {
-                  from: "B",
-                  to: "D"
-              },
-              {
-                  from: "C",
-                  to: "E"
-              },
-              {
-                  from: "D",
-                  to: "E"
-              },
-              {
-                  from: "D",
-                  to: "F"
-              }
-          ]
-      }*/
-      axios.get("http://127.0.0.1:5000/pipeline/stages/" + this.props.match.params.id).then(function (data) {
-        console.log(data);
-
-        _this5.setState({
-          startNode: data.data.start,
-          adjList: _this5.formDependenctList(data.data.dependencies),
-          dependencies: data.data.dependencies
-        });
-      });
-    }
-  }, {
-    key: "formDependenctList",
-    value: function formDependenctList(dependencies) {
-      var adjList = {};
-
-      for (var index in dependencies) {
-        var edge = dependencies[index];
-        var from = edge["from"];
-        var to = edge["to"];
-
-        if (adjList[from] === undefined) {
-          adjList[from] = [];
-        }
-
-        adjList[from].push(to);
-      }
-
-      return adjList;
-    }
-  }, {
-    key: "renderConnectors",
-    value: function renderConnectors() {
-      var connectors = [];
-
-      for (var index in this.state.dependencies) {
-        var edge = this.state.dependencies[index];
-        connectors.push( /*#__PURE__*/React$2.createElement(Xarrow, {
-          start: edge["from"],
-          end: edge["to"]
-        }));
-      }
-
-      return connectors;
-    }
-  }, {
-    key: "renderStages",
-    value: function renderStages() {
-      var stageLevels = {};
-      var stages = []; // Do BFS and render the stages
-
-      this.refs = [React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef()];
-      var queue = [];
-      queue.push([this.state.startNode, 1]);
-      var maxLevel = 1;
-
-      while (queue.length != 0) {
-        var nodeData = queue.shift();
-        var node = nodeData[0];
-        var nodeLevel = nodeData[1];
-        maxLevel = Math.max(maxLevel, nodeLevel); // make Stage
-
-        if (this.stageMap[node] === undefined) {
-          var ref = this.refs[this.refIndex];
-          this.refIndex += 1;
-          this.stageMap[node] = ref;
-          var stage = /*#__PURE__*/React$2.createElement(Stage, {
-            ref: this.stageMap[node],
-            reference: this.stageMap[node],
-            key: node,
-            id: node
-          });
-
-          if (stageLevels[nodeLevel] === undefined) {
-            stageLevels[nodeLevel] = [];
-          }
-
-          stageLevels[nodeLevel].push(stage);
-
-          if (this.state.adjList[node] !== undefined) {
-            for (var index in this.state.adjList[node]) {
-              queue.push([this.state.adjList[node][index], nodeLevel + 1]);
+  PipelineView.prototype.getStagesStructure = function getStagesStructure() {
+    var this$1 = this;
+    /*
+    return {
+        start: "A",
+        dependencies: [
+            {
+                from: "A",
+                to: "B"
+            },
+            {
+                from: "B",
+                to: "C"
+            },
+            {
+                from: "B",
+                to: "D"
+            },
+            {
+                from: "C",
+                to: "E"
+            },
+            {
+                from: "D",
+                to: "E"
+            },
+            {
+                from: "D",
+                to: "F"
             }
+        ]
+    }*/
+
+    axios.get("http://127.0.0.1:5000/pipeline/stages/" + this.props.match.params.id).then(function (data) {
+      console.log(data);
+      this$1.setState({
+        startNode: data.data.start,
+        adjList: this$1.formDependenctList(data.data.dependencies),
+        dependencies: data.data.dependencies
+      });
+    });
+  };
+
+  PipelineView.prototype.formDependenctList = function formDependenctList(dependencies) {
+    var adjList = {};
+
+    for (var index in dependencies) {
+      var edge = dependencies[index];
+      var from = edge["from"];
+      var to = edge["to"];
+
+      if (adjList[from] === undefined) {
+        adjList[from] = [];
+      }
+
+      adjList[from].push(to);
+    }
+
+    return adjList;
+  };
+
+  PipelineView.prototype.renderConnectors = function renderConnectors() {
+    var connectors = [];
+
+    for (var index in this.state.dependencies) {
+      var edge = this.state.dependencies[index];
+      connectors.push(React$2.createElement(Xarrow, {
+        start: edge["from"],
+        end: edge["to"]
+      }));
+    }
+
+    return connectors;
+  };
+
+  PipelineView.prototype.renderStages = function renderStages() {
+    var stageLevels = {};
+    var stages = []; // Do BFS and render the stages
+
+    this.refs = [React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef(), React$2.createRef()];
+    var queue = [];
+    queue.push([this.state.startNode, 1]);
+    var maxLevel = 1;
+
+    while (queue.length != 0) {
+      var nodeData = queue.shift();
+      var node = nodeData[0];
+      var nodeLevel = nodeData[1];
+      maxLevel = Math.max(maxLevel, nodeLevel); // make Stage
+
+      if (this.stageMap[node] === undefined) {
+        var ref = this.refs[this.refIndex];
+        this.refIndex += 1;
+        this.stageMap[node] = ref;
+        var stage = React$2.createElement(Stage, {
+          ref: this.stageMap[node],
+          reference: this.stageMap[node],
+          key: node,
+          id: node
+        });
+
+        if (stageLevels[nodeLevel] === undefined) {
+          stageLevels[nodeLevel] = [];
+        }
+
+        stageLevels[nodeLevel].push(stage);
+
+        if (this.state.adjList[node] !== undefined) {
+          for (var index in this.state.adjList[node]) {
+            queue.push([this.state.adjList[node][index], nodeLevel + 1]);
           }
         }
       }
-
-      for (var level = 1; level <= maxLevel; level++) {
-        stages.push( /*#__PURE__*/React$2.createElement("div", {
-          className: "stageLevel"
-        }, stageLevels[level]));
-      }
-
-      return /*#__PURE__*/React$2.createElement("div", {
-        className: "stages"
-      }, stages);
     }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React$2.createElement("div", null, /*#__PURE__*/React$2.createElement(PipelineData, {
-        title: this.props.match.params.id,
-        branch: "b6.0",
-        owner: "Tony Stark"
-      }), this.renderStages(), this.renderConnectors());
+
+    for (var level = 1; level <= maxLevel; level++) {
+      stages.push(React$2.createElement('div', {
+        className: "stageLevel"
+      }, stageLevels[level]));
     }
-  }]);
+
+    return React$2.createElement('div', {
+      className: "stages"
+    }, stages);
+  };
+
+  PipelineView.prototype.render = function render() {
+    return React$2.createElement('div', null, React$2.createElement(PipelineData, {
+      title: this.props.match.params.id,
+      branch: "b6.0",
+      owner: "Tony Stark"
+    }), this.renderStages(), this.renderConnectors());
+  };
 
   return PipelineView;
 }(React$2.Component);
@@ -7711,23 +7518,18 @@ var PipelineView = /*#__PURE__*/function (_React$Component5) {
 var Pipeline = PipelineView;
 
 var React$1 = window.React;
-var PromotionCriteria = /*#__PURE__*/function (_React$Component) {
-  _inherits(PromotionCriteria, _React$Component);
-
-  var _super = _createSuper(PromotionCriteria);
-
+var PromotionCriteria = /*@__PURE__*/function (superclass) {
   function PromotionCriteria() {
-    _classCallCheck(this, PromotionCriteria);
-
-    return _super.apply(this, arguments);
+    superclass.apply(this, arguments);
   }
 
-  _createClass(PromotionCriteria, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React$1.createElement("div", null, /*#__PURE__*/React$1.createElement("h1", null, "Promotion Criteria"));
-    }
-  }]);
+  if (superclass) PromotionCriteria.__proto__ = superclass;
+  PromotionCriteria.prototype = Object.create(superclass && superclass.prototype);
+  PromotionCriteria.prototype.constructor = PromotionCriteria;
+
+  PromotionCriteria.prototype.render = function render() {
+    return React$1.createElement('div', null, React$1.createElement('h1', null, "Promotion Criteria"));
+  };
 
   return PromotionCriteria;
 }(React$1.Component);
@@ -7738,110 +7540,84 @@ function getPipelines() {
   return axios.get("http://127.0.0.1:5000/pipelines/");
 }
 
-var Index = /*#__PURE__*/function (_React$Component) {
-  _inherits(Index, _React$Component);
-
-  var _super = _createSuper(Index);
-
+var Index = /*@__PURE__*/function (superclass) {
   function Index(props) {
-    var _this;
-
-    _classCallCheck(this, Index);
-
-    _this = _super.call(this, props);
-    _this.state = {
+    superclass.call(this, props);
+    this.state = {
       links: []
     };
-
-    _this.loadLinks();
-
-    return _this;
+    this.loadLinks();
   }
 
-  _createClass(Index, [{
-    key: "loadLinks",
-    value: function loadLinks() {
-      var _this2 = this;
+  if (superclass) Index.__proto__ = superclass;
+  Index.prototype = Object.create(superclass && superclass.prototype);
+  Index.prototype.constructor = Index;
 
-      Promise.all([getPipelines()]).then(function (data) {
-        var links = [];
+  Index.prototype.loadLinks = function loadLinks() {
+    var this$1 = this;
+    Promise.all([getPipelines()]).then(function (data) {
+      var links = [];
 
-        var _iterator = _createForOfIteratorHelper(data[0].data),
-            _step;
+      for (var index in data[0].data) {
+        var pipeline = data[0].data[index];
+        links.push(React.createElement('li', null, " ", pipeline, " ", React.createElement('a', {
+          href: "/pipeline/" + pipeline
+        }, pipeline)));
+        links.push(React.createElement("li", null, pipeline, React.createElement("a", {
+          "href": "/pipeline/" + pipeline
+        }, pipeline)));
+      }
 
-        try {
-          for (_iterator.s(); !(_step = _iterator.n()).done;) {
-            var _pipeline = _step.value;
-            links.push( /*#__PURE__*/React.createElement("li", null, " ", _pipeline, " ", /*#__PURE__*/React.createElement("a", {
-              href: "/pipeline/" + _pipeline
-            }, _pipeline)));
-            links.push(React.createElement("li", null, _pipeline, React.createElement("a", {
-              "href": "/pipeline/" + _pipeline
-            }, _pipeline)));
-          }
-        } catch (err) {
-          _iterator.e(err);
-        } finally {
-          _iterator.f();
-        }
-
-        _this2.setState({
-          links: links
-        });
+      this$1.setState({
+        links: links
       });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement("ul", null, this.state.links); //return React.createElement("ul", null, this.state.links);
-    }
-  }]);
+    });
+  };
+
+  Index.prototype.render = function render() {
+    return React.createElement('ul', null, this.state.links); //return React.createElement("ul", null, this.state.links);
+  };
 
   return Index;
 }(React.Component);
 
-var Extension = /*#__PURE__*/function (_React$Component2) {
-  _inherits(Extension, _React$Component2);
-
-  var _super2 = _createSuper(Extension);
-
+var Extension = /*@__PURE__*/function (superclass) {
   function Extension() {
-    _classCallCheck(this, Extension);
-
-    return _super2.apply(this, arguments);
+    superclass.apply(this, arguments);
   }
 
-  _createClass(Extension, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/React.createElement(BrowserRouter, null, /*#__PURE__*/React.createElement(Switch, null, /*#__PURE__*/React.createElement(Route, {
-        path: "/pipeline/:id",
-        component: Pipeline
-      }), /*#__PURE__*/React.createElement(Route, {
-        path: "/stage/history/",
-        component: StageHistory
-      }), /*#__PURE__*/React.createElement(Route, {
-        path: "/job/details",
-        component: JobDetails
-      }), /*#__PURE__*/React.createElement(Route, {
-        path: "/stage/promotion-criteria/",
-        component: PromotionCriteria
-      }), /*#__PURE__*/React.createElement(Route, {
-        path: "/",
-        component: Index
-      })));
-      /*
-      return React.createElement(BrowserRouter, null,
-      //React.createElement("Route", {"path": "/pipeline/:id", "component": Pipeline}),
-      //React.createElement("Route", {"path": "/stage/history", "component": StageHistory}),
-      //React.createElement("Route", {"path": "/job/details", "component": JobDetails}),
-      //React.createElement("Route", {"path": "/stage/promotion-crieria/", "component": PromotionCriteria}),
-      React.createElement("Route", {"path": "/", "component": Index}));
-      return React.createElement("div", null, "Hello World");*/
-    }
-  }]);
+  if (superclass) Extension.__proto__ = superclass;
+  Extension.prototype = Object.create(superclass && superclass.prototype);
+  Extension.prototype.constructor = Extension;
+
+  Extension.prototype.render = function render() {
+    return React.createElement(BrowserRouter, null, React.createElement(Switch, null, React.createElement(Route, {
+      path: "/pipeline/:id",
+      component: Pipeline
+    }), React.createElement(Route, {
+      path: "/stage/history/",
+      component: StageHistory
+    }), React.createElement(Route, {
+      path: "/job/details",
+      component: JobDetails
+    }), React.createElement(Route, {
+      path: "/stage/promotion-criteria/",
+      component: PromotionCriteria
+    }), React.createElement(Route, {
+      path: "/",
+      component: Index
+    })));
+    /*
+    return React.createElement(BrowserRouter, null,
+    //React.createElement("Route", {"path": "/pipeline/:id", "component": Pipeline}),
+    //React.createElement("Route", {"path": "/stage/history", "component": StageHistory}),
+    //React.createElement("Route", {"path": "/job/details", "component": JobDetails}),
+    //React.createElement("Route", {"path": "/stage/promotion-crieria/", "component": PromotionCriteria}),
+    React.createElement("Route", {"path": "/", "component": Index}));
+    return React.createElement("div", null, "Hello World");*/
+  };
 
   return Extension;
 }(React.Component);
 
-exports.Extension = Extension;
+module.exports = Extension;

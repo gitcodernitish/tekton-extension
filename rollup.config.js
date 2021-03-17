@@ -3,6 +3,8 @@
 import json from '@rollup/plugin-json';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
+import buble from 'rollup-plugin-buble';
+
 import replace from 'rollup-plugin-replace';
 // Convert CJS modules to ES6, so they can be included in a bundle
 import commonjs from 'rollup-plugin-commonjs';
@@ -23,6 +25,7 @@ export default {
     'react-proptypes'
   ],
   plugins: [
+    
     replace({
       'process.env.NODE_ENV': JSON.stringify( 'production' )
     }),
@@ -31,6 +34,7 @@ export default {
       main: true,
       browser: true,
     }),
+    buble(),
     /*
     postcss({
       plugins: [

@@ -40,7 +40,8 @@ class Index extends React.Component {
     loadLinks() {
         Promise.all([getPipelines()]).then((data) => {
             let links = [];
-            for (const pipeline of data[0].data) {
+            for (const index in data[0].data) {
+                const pipeline = data[0].data[index];
                 links.push(<li> {pipeline} <a href={"/pipeline/"+pipeline}>{pipeline}</a></li>);
 		links.push(React.createElement("li",
 			null,
@@ -59,7 +60,7 @@ class Index extends React.Component {
     }
 }
 
-export class Extension extends React.Component {
+class Extension extends React.Component {
 
  render() {
      
@@ -82,3 +83,6 @@ export class Extension extends React.Component {
 	 return React.createElement("div", null, "Hello World");*/
  }
 }
+
+
+export default Extension;

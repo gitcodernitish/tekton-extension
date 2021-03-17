@@ -130,7 +130,8 @@ class Stage extends React.Component {
         let jobs = [];
         //const jobsData = this.getJobData();
 
-        for (const jobData of this.state.jobs) {
+        for (const index in this.state.jobs) {
+            const jobData = this.state.jobs[index];
             jobs.push(<Job name={jobData["name"]} status={jobData["status"]} build={jobData["build"]} time_verbose={jobData["time_verbose"]}/>)
         }
 
