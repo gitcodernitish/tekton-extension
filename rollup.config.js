@@ -22,7 +22,11 @@ export default {
     'react-proptypes'
   ],
   plugins: [
-    resolve(),
+    resolve({
+      jsnext: true,
+      main: true,
+      browser: true,
+    }),
     /*
     postcss({
       plugins: [
