@@ -1,4 +1,4 @@
-import React from 'react';
+
 //import ReactDOM from 'react-dom';///
 //import './index.css';
 import { JobDetails } from './components/job-details';
@@ -15,7 +15,7 @@ const Link = reactRouterDom.Link;
 const Route = reactRouterDom.Route;
 const matchPath = reactRouterDom.matchPath;
 */
-//const React = window.React;
+const React = window.React;
 //const axios = require("axios");
 const pipeline1 = "CDM_DLC_PIPELINE";
 const pipeline2 = "DAG_PIPELINE1";
