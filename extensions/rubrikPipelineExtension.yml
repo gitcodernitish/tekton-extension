@@ -1,0 +1,50 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: rubrik-pipeline-extension
+  labels:
+    app: rubrik-pipeline-extension
+    tekton-dashboard-extension: "true"
+  annotations:
+    tekton-dashboard-display-name: RubrikPipelines
+    tekton-dashboard-endpoints: sample.bundle.pipelines.stage-status.jobs.stages
+    tekton-dashboard-bundle-location: bundle
+spec:
+  ports:
+  - port: 3000
+    targetPort: 3000
+  selector:
+    app: rubrik-pipeline-extension
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rubrik-pipeline-extension
+  labels: 
+    app: rubrik-pipeline-extension
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rubrik-pipeline-extension
+  template:
+    metadata:
+      labels:
+        app: rubrik-pipeline-extension
+    spec:
+      containers:
+      - name: rubrik-extension
+        image: dmportella/expressjs
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000
+        command:
+        - bash
+        args:
+        - -c
+        - |
+          git clone https://github.com/vijay-chintala/tekton-extension.git
+          cd /app/tekton-extension
+          npm install
+          npm install -g express
+          node /app/tekton-extension/server.js
