@@ -6740,16 +6740,16 @@ var Index = /*@__PURE__*/function (superclass) {
   return Index;
 }(React.Component);
 
-var Extension = /*@__PURE__*/function (superclass) {
-  function Extension() {
+/*@__PURE__*/(function (superclass) {
+  function RouteExtension() {
     superclass.apply(this, arguments);
   }
 
-  if (superclass) Extension.__proto__ = superclass;
-  Extension.prototype = Object.create(superclass && superclass.prototype);
-  Extension.prototype.constructor = Extension;
+  if (superclass) RouteExtension.__proto__ = superclass;
+  RouteExtension.prototype = Object.create(superclass && superclass.prototype);
+  RouteExtension.prototype.constructor = RouteExtension;
 
-  Extension.prototype.render = function render() {
+  RouteExtension.prototype.render = function render() {
     return React.createElement(MemoryRouter, null, React.createElement(Switch, null, React.createElement(Route, {
       path: "/pipeline/:id",
       component: Pipeline
@@ -6774,6 +6774,24 @@ var Extension = /*@__PURE__*/function (superclass) {
     //React.createElement("Route", {"path": "/stage/promotion-crieria/", "component": PromotionCriteria}),
     React.createElement("Route", {"path": "/", "component": Index}));
     return React.createElement("div", null, "Hello World");*/
+  };
+
+  return RouteExtension;
+})(React.Component);
+
+var Extension = /*@__PURE__*/function (superclass) {
+  function Extension() {
+    superclass.apply(this, arguments);
+  }
+
+  if (superclass) Extension.__proto__ = superclass;
+  Extension.prototype = Object.create(superclass && superclass.prototype);
+  Extension.prototype.constructor = Extension;
+
+  Extension.prototype.render = function render() {
+    return React.createElement(Pipeline, {
+      id: "CDM_DLC_PIPELINE"
+    });
   };
 
   return Extension;

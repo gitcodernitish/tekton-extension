@@ -62,7 +62,7 @@ class Index extends React.Component {
     }
 }
 
-class Extension extends React.Component {
+class RouteExtension extends React.Component {
 
  render() {
      
@@ -86,5 +86,11 @@ class Extension extends React.Component {
  }
 }
 
+
+class Extension extends React.Component {
+    render() {
+        return (<Pipeline id="CDM_DLC_PIPELINE"/>);
+    }
+}
 
 export default Extension;
