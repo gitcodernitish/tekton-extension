@@ -6303,6 +6303,99 @@ function (_React$Component) {
 
 React__default['default'].useContext;
 
+var ComponentStyles = {
+  "stage": {
+    display: "inline-block",
+    width: "350px",
+    border: "1px solid gray",
+    margin: "20px",
+    height: "130px"
+  },
+  "stage-status": {
+    display: "inline-block",
+    position: "absolute",
+    height: "130px",
+    width: "20px"
+  },
+  "stage-data": {
+    overflow: "auto",
+    width: "350px",
+    height: "130px",
+    display: "inline-flex"
+  },
+  "clear": {
+    clear: "both"
+  },
+  "float-left": {
+    marginLeft: "10px",
+    position: "absolute",
+    cssFloat: "left"
+  },
+  "float-right": {
+    cssFloat: "right"
+  },
+  "stage-header": {
+    position: "relative",
+    marginBottom: "10px"
+  },
+  "font-size-20": {
+    fontSize: "20px"
+  },
+  "stage-right": {
+    position: "absolute",
+    left: "295px"
+  },
+  "stage-body": {
+    width: "100%",
+    display: "inline-block"
+  },
+  "job": {
+    display: "inline-block",
+    width: "110px",
+    border: "1px solid gray",
+    margin: "20px",
+    height: "80px"
+  },
+  "stage-container": {
+    position: "absolute",
+    marginLeft: "15px",
+    width: "305px",
+    height: "100px"
+  },
+  "blue-tag": {
+    textDecoration: "underline",
+    color: "blue",
+    fontSize: "10px",
+    cursor: "pointer"
+  },
+  "job-name": {
+    fontWeight: 500,
+    margin: "2px"
+  },
+  "job-status": {
+    color: "green",
+    fontSize: "10px",
+    margin: "2px"
+  },
+  "job-completion-time": {
+    fontSize: "8px",
+    margin: "2px"
+  },
+  "job-detail": {
+    margin: "2px",
+    cursor: "pointer"
+  },
+  "promotion-criteria": {
+    top: "114px",
+    cursor: "pointer"
+  },
+  "stage-name": {
+    textOverflow: "ellipsis",
+    overflow: "hidden",
+    maxWidth: "200px"
+  }
+};
+
 var React$2 = window.React;
 
 var PipelineData = /*@__PURE__*/function (superclass) {
@@ -6343,19 +6436,23 @@ var Job = /*@__PURE__*/function (superclass) {
 
   Job.prototype.render = function render() {
     return React$2.createElement('div', {
-      className: "job"
+      className: "job",
+      style: ComponentStyles.job
     }, React$2.createElement('div', {
-      className: "job-name"
+      className: "job-name",
+      style: ComponentStyles['job-name']
     }, this.props.name), React$2.createElement('div', {
-      style: {
+      style: Object.assign({}, {
         color: this.getStatusColor()
-      },
+      }, ComponentStyles['job-status']),
       className: "job-status"
     }, this.props.status, " - ", this.props.build), React$2.createElement('div', {
-      className: "job-completion-time"
+      className: "job-completion-time",
+      style: ComponentStyles['job-completion-time']
     }, this.props.time_verbose), React$2.createElement('a', {
       href: "/job/details/",
-      className: "job-detail blue-tag"
+      className: "job-detail blue-tag",
+      style: Object.assign({}, ComponentStyles['job-detail'], ComponentStyles['blue-tag'])
     }, "Details"));
   };
 
@@ -6385,9 +6482,9 @@ var StageStatus = /*@__PURE__*/function (superclass) {
   StageStatus.prototype.render = function render() {
     return React$2.createElement('span', {
       className: "stage-status",
-      style: {
+      style: Object.assign({}, {
         background: this.getStatusColor()
-      }
+      }, ComponentStyles['stage-status'])
     });
   };
 
@@ -6488,30 +6585,39 @@ var Stage = /*@__PURE__*/function (superclass) {
     return React$2.createElement('span', {
       id: this.props.id,
       ref: this.props.reference,
-      className: "stage"
+      className: "stage",
+      style: ComponentStyles.stage
     }, React$2.createElement('span', {
-      className: "stage-data"
+      className: "stage-data",
+      style: ComponentStyles['stage-data']
     }, React$2.createElement(StageStatus, {
       status: this.state.status
     }), React$2.createElement('div', {
-      className: "stage-container"
+      className: "stage-container",
+      style: ComponentStyles['stage-container']
     }, React$2.createElement('div', {
-      className: "stage-header"
+      className: "stage-header",
+      style: ComponentStyles['stage-header']
     }, React$2.createElement('span', {
-      className: "float-left font-size-20 stage-name"
+      className: "float-left font-size-20 stage-name",
+      style: Object.assign({}, ComponentStyles['float-left'], ComponentStyles['font-size-20'], ComponentStyles['stage-name'])
     }, this.getStageName()), React$2.createElement('span', {
-      className: "stage-right"
+      className: "stage-right",
+      style: ComponentStyles['stage-right']
     }, React$2.createElement('a', {
       href: "/stage/history/",
-      className: "blue-tag"
+      className: "blue-tag",
+      style: ComponentStyles['blue-tag']
     }, "History"))), React$2.createElement('div', {
-      className: "stage-body"
+      className: "stage-body",
+      style: ComponentStyles['stage-body']
     }, React$2.createElement('div', {
       className: "jobs-container"
     }, this.renderJobs())), React$2.createElement('div', {
       className: "stage-tail"
     }, React$2.createElement('span', {
-      className: "float-left blue-tag promotion-criteria"
+      className: "float-left blue-tag promotion-criteria",
+      style: Object.assign({}, ComponentStyles['float-left'], ComponentStyles['blue-tag'], ComponentStyles['promotion-criteria'])
     }, React$2.createElement('a', {
       href: "/stage/promotion-criteria/"
     }, "Promotion Criteria"))))));

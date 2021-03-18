@@ -1,6 +1,6 @@
 const React = window.React;
 //import ReactDOM from 'react-dom';///
-//import './index.css';
+import './index.css';
 import { JobDetails } from './components/job-details';
 import { StageHistory } from './components/stage-history';
 import { Pipeline } from './components/pipeline';

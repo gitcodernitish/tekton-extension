@@ -4,6 +4,7 @@ import Xarrow from 'react-xarrows';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 
+import { ComponentStyles } from './styles';
 
 class PipelineData extends React.Component {
 
@@ -36,11 +37,11 @@ class Job extends React.Component {
 
     render() {
         return (
-            <div className="job">
-                <div className="job-name">{this.props.name}</div>
-                <div style={{color: this.getStatusColor()}} className="job-status">{this.props.status} - {this.props.build}</div>
-                <div className="job-completion-time">{this.props.time_verbose}</div>
-                <a href="/job/details/" className="job-detail blue-tag">Details</a>
+            <div className="job" style={ComponentStyles.job}>
+                <div className="job-name" style={ComponentStyles['job-name']}>{this.props.name}</div>
+                <div style={{color: this.getStatusColor(), ...ComponentStyles['job-status']}} className="job-status">{this.props.status} - {this.props.build}</div>
+                <div className="job-completion-time" style={ComponentStyles['job-completion-time']}>{this.props.time_verbose}</div>
+                <a href="/job/details/" className="job-detail blue-tag" style={{...ComponentStyles['job-detail'], ...ComponentStyles['blue-tag']}}>Details</a>
             </div>);
     }
 }
@@ -60,7 +61,7 @@ class StageStatus extends React.Component {
     }
 
     render() {
-        return (<span className="stage-status" style={{background: this.getStatusColor()}}></span>);
+        return (<span className="stage-status" style={{background: this.getStatusColor(), ...ComponentStyles['stage-status']}}></span>);
     }
 }
 
@@ -146,24 +147,27 @@ class Stage extends React.Component {
     render() {
 
         return (
-            <span id={this.props.id}ref={this.props.reference} className="stage">
-                <span className="stage-data">
+            <span id={this.props.id}ref={this.props.reference} className="stage" style={ComponentStyles.stage}>
+                <span className="stage-data" style={ComponentStyles['stage-data']}>
                     <StageStatus status={this.state.status}/>
-                    <div className="stage-container">
-                        <div className="stage-header">
-                            <span className="float-left font-size-20 stage-name">{this.getStageName()}</span>
+                    <div className="stage-container" style={ComponentStyles['stage-container']}>
+                        <div className="stage-header" style={ComponentStyles['stage-header']}>
+                            <span className="float-left font-size-20 stage-name"
+                                style={{...ComponentStyles['float-left'], ...ComponentStyles['font-size-20'], ...ComponentStyles['stage-name']}}>{this.getStageName()}</span>
                             
-                            <span className="stage-right">
-                                <a href="/stage/history/" className="blue-tag">History</a>
+                            <span className="stage-right" style={ComponentStyles['stage-right']}>
+                                <a href="/stage/history/" className="blue-tag" style={ComponentStyles['blue-tag']}>History</a>
                             </span>
                         </div>
-                        <div className="stage-body">
+                        <div className="stage-body" style={ComponentStyles['stage-body']}>
                             <div className="jobs-container">
                                 { this.renderJobs() }
                             </div>
                         </div>
                         <div className="stage-tail">
-                            <span className="float-left blue-tag promotion-criteria"><a href="/stage/promotion-criteria/">Promotion Criteria</a></span>
+                            <span className="float-left blue-tag promotion-criteria"
+                                style={{...ComponentStyles['float-left'], ...ComponentStyles['blue-tag'], ...ComponentStyles['promotion-criteria']}}
+                            ><a href="/stage/promotion-criteria/">Promotion Criteria</a></span>
                         </div>
                     </div>
                 </span>

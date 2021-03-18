@@ -4,8 +4,9 @@ import json from '@rollup/plugin-json';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import buble from 'rollup-plugin-buble';
-
+import scss from 'rollup-plugin-scss'
 import replace from 'rollup-plugin-replace';
+import inlinePostCSS from 'rollup-plugin-inline-postcss';
 // Convert CJS modules to ES6, so they can be included in a bundle
 import commonjs from 'rollup-plugin-commonjs';
 //import postcss from 'rollup-plugin-postcss';
@@ -25,7 +26,8 @@ export default {
     'react-proptypes'
   ],
   plugins: [
-    
+    scss(),
+    inlinePostCSS(),
     replace({
       'process.env.NODE_ENV': JSON.stringify( 'production' )
     }),
@@ -34,7 +36,8 @@ export default {
       main: true,
       browser: true,
     }),
-    buble(),
+    
+    buble({objectAssign: 'Object.assign'}),
     /*
     postcss({
       plugins: [
