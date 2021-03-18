@@ -6,9 +6,9 @@ import { StageHistory } from './components/stage-history';
 import { Pipeline } from './components/pipeline';
 import { PromotionCriteria } from './components/promotion-criteria';
 import axios from 'axios';
-import { BrowserRouter,Switch, Link, Route, matchPath } from 'react-router-dom';  
-import createMemoryHistory from 'history/lib/createMemoryHistory';
-const history = createMemoryHistory();
+import { Switch, Link, Route, matchPath, MemoryRouter } from 'react-router-dom';  
+//import createMemoryHistory from 'history/lib/createMemoryHistory';
+//const history = createMemoryHistory();
 /*
 const reactRouterDom = require('react-router-dom');
 const BrowserRouter = reactRouterDom.BrowserRouter;
@@ -67,7 +67,7 @@ class Extension extends React.Component {
  render() {
      
     return(
-    <BrowserRouter history={history} >
+    <MemoryRouter>
         <Switch>
             <Route path="/pipeline/:id" component={Pipeline}/>
             <Route path="/stage/history/" component={StageHistory} />
@@ -75,7 +75,7 @@ class Extension extends React.Component {
             <Route path="/stage/promotion-criteria/" component={PromotionCriteria} />
             <Route path="/" component={Index} />
         </Switch>
-    </BrowserRouter>);/*
+    </MemoryRouter>);/*
 	return React.createElement(BrowserRouter, null,
 		//React.createElement("Route", {"path": "/pipeline/:id", "component": Pipeline}),
 		//React.createElement("Route", {"path": "/stage/history", "component": StageHistory}),
