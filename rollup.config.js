@@ -17,8 +17,7 @@ export default {
   input: 'src/index.js',
   output: {
     file: 'dist/bundle.js',
-    format: 'iife',
-    sourceMap: 'inline'
+    format: 'cjs'
   },
   // All the used libs needs to be here
   external: [
