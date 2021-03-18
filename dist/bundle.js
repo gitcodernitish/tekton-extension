@@ -1,6 +1,6 @@
 'use strict';
 
-var React$5 = require('react');
+var React$5 = window.React;
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -8496,4 +8496,4 @@ var Extension = /*@__PURE__*/function (superclass) {
   return Extension;
 }(React.Component);
 
-module.exports = Extension;
+export default Extension;
