@@ -7,6 +7,8 @@ import { Pipeline } from './components/pipeline';
 import { PromotionCriteria } from './components/promotion-criteria';
 import axios from 'axios';
 import { BrowserRouter,Switch, Link, Route, matchPath } from 'react-router-dom';  
+import createMemoryHistory from 'history/lib/createMemoryHistory';
+const history = createMemoryHistory();
 /*
 const reactRouterDom = require('react-router-dom');
 const BrowserRouter = reactRouterDom.BrowserRouter;
@@ -65,7 +67,7 @@ class Extension extends React.Component {
  render() {
      
     return(
-    <BrowserRouter>
+    <BrowserRouter history={history} >
         <Switch>
             <Route path="/pipeline/:id" component={Pipeline}/>
             <Route path="/stage/history/" component={StageHistory} />

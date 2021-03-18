@@ -1,10 +1,12 @@
 'use strict';
 
 var React$5 = window.React;
+var createMemoryHistory$1 = require('history/lib/createMemoryHistory');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React$5);
+var createMemoryHistory__default = /*#__PURE__*/_interopDefaultLegacy(createMemoryHistory$1);
 
 var React$4 = window.React;
 var JobDetails = /*@__PURE__*/function (superclass) {
@@ -2463,7 +2465,7 @@ var factoryWithThrowingShims = function() {
       'Use PropTypes.checkPropTypes() to call them. ' +
       'Read more at http://fb.me/use-check-prop-types'
     );
-    err.name = 'Invamodule.exportsriant Violation';
+    err.name = 'Invariant Violation';
     throw err;
   }  shim.isRequired = shim;
   function getShim() {
@@ -7535,6 +7537,7 @@ var PromotionCriteria = /*@__PURE__*/function (superclass) {
 }(React$1.Component);
 
 var React = window.React; //import ReactDOM from 'react-dom';///
+var history = createMemoryHistory__default['default']();
 
 function getPipelines() {
   return axios.get("v1/extensions/rubrik-pipeline-extension/pipelines");
@@ -7591,7 +7594,9 @@ var Extension = /*@__PURE__*/function (superclass) {
   Extension.prototype.constructor = Extension;
 
   Extension.prototype.render = function render() {
-    return React.createElement(BrowserRouter, null, React.createElement(Switch, null, React.createElement(Route, {
+    return React.createElement(BrowserRouter, {
+      history: history
+    }, React.createElement(Switch, null, React.createElement(Route, {
       path: "/pipeline/:id",
       component: Pipeline
     }), React.createElement(Route, {
