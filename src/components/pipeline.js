@@ -96,7 +96,7 @@ class Stage extends React.Component {
     }
 
     getStageStatus() {
-        axios.get("http://127.0.0.1:5000/stage/status/"+this.props.id).then((data) => {
+        axios.get("v1/extensions/rubrik-pipeline-extension/stage-status/"+this.props.id).then((data) => {
             this.setState({
                 status: data.data
             });
@@ -119,7 +119,7 @@ class Stage extends React.Component {
                 "time_verbose": "Completed 5 mins ago"
             }
         ]*/
-        axios.get("http://127.0.0.1:5000/stage/jobs/"+this.props.id).then((data) => {
+        axios.get("v1/extensions/rubrik-pipeline-extension/jobs/"+this.props.id).then((data) => {
             this.setState({
                 jobs: data.data
             });
@@ -219,7 +219,7 @@ class PipelineView extends React.Component {
             ]
         }*/
     
-        axios.get("http://127.0.0.1:5000/pipeline/stages/"+this.props.id).then(
+        axios.get("v1/extensions/rubrik-pipeline-extension/stages/"+this.props.id).then(
             (data) => {
                 console.log(data);
                 this.setState({

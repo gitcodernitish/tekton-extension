@@ -6431,7 +6431,7 @@ var Stage = /*@__PURE__*/function (superclass) {
 
   Stage.prototype.getStageStatus = function getStageStatus() {
     var this$1 = this;
-    axios.get("http://127.0.0.1:5000/stage/status/" + this.props.id).then(function (data) {
+    axios.get("v1/extensions/rubrik-pipeline-extension/stage-status/" + this.props.id).then(function (data) {
       this$1.setState({
         status: data.data
       });
@@ -6456,7 +6456,7 @@ var Stage = /*@__PURE__*/function (superclass) {
         }
     ]*/
 
-    axios.get("http://127.0.0.1:5000/stage/jobs/" + this.props.id).then(function (data) {
+    axios.get("v1/extensions/rubrik-pipeline-extension/jobs/" + this.props.id).then(function (data) {
       this$1.setState({
         jobs: data.data
       });
@@ -6570,7 +6570,7 @@ var PipelineView = /*@__PURE__*/function (superclass) {
         ]
     }*/
 
-    axios.get("http://127.0.0.1:5000/pipeline/stages/" + this.props.id).then(function (data) {
+    axios.get("v1/extensions/rubrik-pipeline-extension/stages/" + this.props.id).then(function (data) {
       console.log(data);
       this$1.setState({
         startNode: data.data.start,
