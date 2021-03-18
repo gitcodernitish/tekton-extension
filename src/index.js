@@ -23,7 +23,7 @@ const pipeline3 = "DAG_PIPELINE2";
 
 
 function getPipelines() {
-    return axios.get("http://127.0.0.1:5000/pipelines/");
+    return axios.get("api/v1/namespaces/tekton-pipelines/services/tekton-dashboard:http/proxy/v1/extensions/rubrik-pipeline-extension/pipelines");
 }
 
 const pipeline = pipeline3;
