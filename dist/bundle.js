@@ -6570,7 +6570,7 @@ var PipelineView = /*@__PURE__*/function (superclass) {
         ]
     }*/
 
-    axios.get("http://127.0.0.1:5000/pipeline/stages/" + this.props.match.params.id).then(function (data) {
+    axios.get("http://127.0.0.1:5000/pipeline/stages/" + this.props.id).then(function (data) {
       console.log(data);
       this$1.setState({
         startNode: data.data.start,

@@ -219,7 +219,7 @@ class PipelineView extends React.Component {
             ]
         }*/
     
-        axios.get("http://127.0.0.1:5000/pipeline/stages/"+this.props.match.params.id).then(
+        axios.get("http://127.0.0.1:5000/pipeline/stages/"+this.props.id).then(
             (data) => {
                 console.log(data);
                 this.setState({
