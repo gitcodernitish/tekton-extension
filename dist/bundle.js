@@ -1,3 +1,5 @@
+const React$5 = window.React;
+
 (function (React$5) {
     'use strict';
 
