@@ -1,6 +1,7 @@
 'use strict';
 
 var React$5 = window.React;
+
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
 var React__default = /*#__PURE__*/_interopDefaultLegacy(React$5);
@@ -7536,7 +7537,7 @@ var PromotionCriteria = /*@__PURE__*/function (superclass) {
 var React = window.React; //import ReactDOM from 'react-dom';///
 
 function getPipelines() {
-  return axios.get("http://127.0.0.1:5000/pipelines/");
+  return axios.get("api/v1/namespaces/tekton-pipelines/services/tekton-dashboard:http/proxy/v1/extensions/rubrik-pipeline-extension/pipelines");
 }
 
 var Index = /*@__PURE__*/function (superclass) {
