@@ -306,7 +306,7 @@ class PipelineView extends React.Component {
     render() {
         return (
         <div>
-            <PipelineData title={this.props.match.params.id} branch="b6.0" owner="Tony Stark" />
+            <PipelineData title={this.props.id} branch="b6.0" owner="Tony Stark" />
             {this.renderStages()}
             {this.renderConnectors()}
         </div>);

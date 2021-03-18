@@ -6665,7 +6665,7 @@ var PipelineView = /*@__PURE__*/function (superclass) {
 
   PipelineView.prototype.render = function render() {
     return React$2.createElement('div', null, React$2.createElement(PipelineData, {
-      title: this.props.match.params.id,
+      title: this.props.id,
       branch: "b6.0",
       owner: "Tony Stark"
     }), this.renderStages(), this.renderConnectors());
