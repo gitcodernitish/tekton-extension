@@ -2463,7 +2463,7 @@ var factoryWithThrowingShims = function() {
       'Use PropTypes.checkPropTypes() to call them. ' +
       'Read more at http://fb.me/use-check-prop-types'
     );
-    err.name = 'Invariant Violation';
+    err.name = 'Invamodule.exportsriant Violation';
     throw err;
   }  shim.isRequired = shim;
   function getShim() {
@@ -7537,7 +7537,7 @@ var PromotionCriteria = /*@__PURE__*/function (superclass) {
 var React = window.React; //import ReactDOM from 'react-dom';///
 
 function getPipelines() {
-  return axios.get("api/v1/namespaces/tekton-pipelines/services/tekton-dashboard:http/proxy/v1/extensions/rubrik-pipeline-extension/pipelines");
+  return axios.get("v1/extensions/rubrik-pipeline-extension/pipelines");
 }
 
 var Index = /*@__PURE__*/function (superclass) {
